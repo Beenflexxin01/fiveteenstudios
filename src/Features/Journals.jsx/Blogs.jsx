@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import f8 from "../../Images/f11.jpeg";
+import f76 from "../../Images/f76.jpeg";
 import f38 from "../../Images/f38.jpeg";
 import f31 from "../../Images/f31.jpeg";
 import f3 from "../../Images/f3.jpeg";
@@ -10,7 +10,7 @@ import Footer from "../../UI/Footer";
 function Blogs() {
   return (
     <>
-      <img src={f8} alt="" className="blog-image" />
+      <img src={f76} alt="" className="blog-image" />
       <div className=" blog">
         <h2 className="primary-header h2">PALMS BLANC</h2>
         <div className="design-div ">

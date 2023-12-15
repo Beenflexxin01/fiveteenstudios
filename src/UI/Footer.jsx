@@ -45,6 +45,7 @@ function Footer() {
           </div>
         </div>
         <hr className="hr" />
+
         <div className="footer-nav footer-image">
           <ul className="footer-nav-ul">
             <li className="">

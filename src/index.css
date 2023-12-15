@@ -294,7 +294,7 @@ textarea {
 }
 
 .footer-image {
-  margin-left: 6%;
+  margin-left: 10%;
 }
 
 .footer-nav-ul {
@@ -302,6 +302,7 @@ textarea {
   gap: 4rem;
   align-items: center;
   margin-left: 30%;
+  text-align: center;
   margin-top: 5rem;
 }
 
@@ -317,7 +318,7 @@ textarea {
 .nav-link {
   text-decoration: none;
   color: #555;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 ion-icon {
@@ -495,10 +496,16 @@ ion-icon {
 
 .checkout-grid-scroll {
   border: 0.2px solid #e0e0e0;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.checkout-grid-scroll::-webkit-scrollbar {
+  width: 1rem;
 }
 
 .checkout-grid {
-  padding: 4rem;
+  padding: 7rem;
 }
 
 .checkout_2 {
@@ -509,17 +516,25 @@ ion-icon {
   transform: none;
 }
 
-.checkout-grid-scroll {
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.checkout-grid-scroll::-webkit-scrollbar {
-  width: 1rem;
+.grid-checkout {
+  grid-template-columns: 55% 45%;
 }
 
 .checkout-logo {
   height: 8rem;
+}
+
+.credit-card-type {
+  height: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.credit-card-img {
+  height: 3rem;
+  width: 4.7rem;
+  margin-left: 1.2rem;
 }
 
 .paypal {
@@ -615,8 +630,10 @@ ion-icon {
 .form-payment {
   background-color: #f9f9f9;
   border: 0.1px solid #dedede;
-  padding: 0 1rem;
+  padding: 2rem 4rem;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-payment {
@@ -669,6 +686,7 @@ ion-icon {
 
 .blog-image {
   width: 80%;
+  height: 100vh;
   margin: 0 10rem 0 20rem;
 }
 

@@ -1,0 +1,62 @@
+[
+  {
+    "textDescription": "FIVETEEN STUDIOS",
+    "title": "COZY SZN",
+    "description": "When the sun begins to shy away, leaves transition into a beautiful array of colors, and the air turns crisp and chilly, it's a sure sign that we're entering the realm of Cozy Szn.",
+    "price": "$55.00 USD",
+    "shipPrice": "Shipping calculated at checkout",
+    "size": "L, XL, 2XL",
+    "color": "BLACK",
+    "paymentOption": "More payment options",
+    "image": "f2.jpeg",
+    "imageCover": ["f2.jpeg", "f3.jpeg", "f4.jpeg", "f5.jpeg"]
+  },
+  {
+    "textDescription": "FIVETEEN STUDIOS",
+    "title": "COZY SZN",
+    "description": "When the sun begins to shy away, leaves transition into a beautiful array of colors, and the air turns crisp and chilly, it's a sure sign that we're entering the realm of Cozy Szn.",
+    "price": "$55.00 USD",
+    "shipPrice": "Shipping calculated at checkout",
+    "size": "L, XL, 2XL",
+    "color": "BLACK",
+    "paymentOption": "More payment options",
+    "image": "f2.jpeg",
+    "imageCover": ["f2.jpeg", "f3.jpeg", "f4.jpeg", "f5.jpeg"]
+  },
+  {
+    "textDescription": "FIVETEEN STUDIOS",
+    "title": "COZY SZN",
+    "description": "When the sun begins to shy away, leaves transition into a beautiful array of colors, and the air turns crisp and chilly, it's a sure sign that we're entering the realm of Cozy Szn.",
+    "price": "$55.00 USD",
+    "shipPrice": "Shipping calculated at checkout",
+    "size": "L, XL, 2XL",
+    "color": "BLACK",
+    "paymentOption": "More payment options",
+    "image": "f2.jpeg",
+    "imageCover": ["f2.jpeg", "f3.jpeg", "f4.jpeg", "f5.jpeg"]
+  },
+  {
+    "textDescription": "FIVETEEN STUDIOS",
+    "title": "COZY SZN",
+    "description": "When the sun begins to shy away, leaves transition into a beautiful array of colors, and the air turns crisp and chilly, it's a sure sign that we're entering the realm of Cozy Szn.",
+    "price": "$55.00 USD",
+    "shipPrice": "Shipping calculated at checkout",
+    "size": "L, XL, 2XL",
+    "color": "BLACK",
+    "paymentOption": "More payment options",
+    "image": "f2.jpeg",
+    "imageCover": ["f2.jpeg", "f3.jpeg", "f4.jpeg", "f5.jpeg"]
+  },
+  {
+    "textDescription": "FIVETEEN STUDIOS",
+    "title": "COZY SZN",
+    "description": "When the sun begins to shy away, leaves transition into a beautiful array of colors, and the air turns crisp and chilly, it's a sure sign that we're entering the realm of Cozy Szn.",
+    "price": "$55.00 USD",
+    "shipPrice": "Shipping calculated at checkout",
+    "size": "L, XL, 2XL",
+    "color": "BLACK",
+    "paymentOption": "More payment options",
+    "image": "f2.jpeg",
+    "imageCover": ["f2.jpeg", "f3.jpeg", "f4.jpeg", "f5.jpeg"]
+  }
+]

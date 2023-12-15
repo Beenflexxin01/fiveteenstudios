@@ -1,38 +1,48 @@
 import { Link } from "react-router-dom";
 import f17 from "../../Images/f17.jpeg";
-import f18 from "../../Images/f18.jpeg";
-import f19 from "../../Images/f19.jpeg";
-import f20 from "../../Images/f20.jpeg";
-import f21 from "../../Images/f21.jpeg";
-import f25 from "../../Images/f25.jpeg";
+import f78 from "../../Images/f78.jpeg";
+import f71 from "../../Images/f71.jpeg";
+import f72 from "../../Images/f72.jpeg";
+import f74 from "../../Images/f74.jpeg";
+import f75 from "../../Images/f75.jpeg";
 import f41 from "../../Images/f41.jpeg";
 import f42 from "../../Images/f42.jpeg";
 import f43 from "../../Images/f43.jpeg";
 import f52 from "../../Images/f52.jpeg";
 import Footer from "../../UI/Footer";
+
+// import { products } from "../../data/fiveteendata.json";
+
 function ProductPage() {
   return (
     <>
       <div className="grid-2 product--grid">
         <div className="grid-2-cols checkout-grid product-grid">
           <div className="product-img">
-            <img src={f18} alt="COZY - SZN" className="product-image" />
+            <img src={f78} alt="COZY - SZN" className="product-image" />
           </div>
           <div className="product-image-grid">
-            <div className="product-img-grid">
-              <img src={f19} alt="" className="img-grid-1" />
+            {/* <div className="product-img-grid">
+                
+                <img src={imageCover} alt="" className="img-grid-1" />
+              </div>
+              <div className="img-grid">
+                <img src={imageCover} alt="" className="img-grid-1" />
+              </div> */}
+            <div className="img-grid">
+              <img src={f72} alt="" className="img-grid-1" />
             </div>
             <div className="img-grid">
-              <img src={f20} alt="" className="img-grid-1" />
+              <img src={f74} alt="" className="img-grid-1" />
             </div>
             <div className="img-grid">
-              <img src={f21} alt="" className="img-grid-1" />
+              <img src={f75} alt="" className="img-grid-1" />
             </div>
             <div className="img-grid">
-              <img src={f25} alt="" className="img-grid-1" />
+              <img src={f78} alt="" className="img-grid-1" />
             </div>
             <div className="img-grid">
-              <img src={f20} alt="" className="img-grid-1" />
+              <img src={f71} alt="" className="img-grid-1" />
             </div>
             <div className="img-grid">
               <img src={f17} alt="" className="img-grid-1" />
