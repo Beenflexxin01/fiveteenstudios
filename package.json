@@ -2,10 +2,12 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "type": "cjs",
+  "type": "commonjs",
+  "main": "./src/App",
+  "proxy": "http://localhost:5173",
   "scripts": {
     "dev": "vite",
-    "start": "nodemon server.js",
+    "start": "nodemon ./src/server.js",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

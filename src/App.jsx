@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 import AppLayout from "./UI/AppLayout";
 import Home from "./Page/Home";
 import Products from "./Page/Products";
@@ -17,6 +17,13 @@ import Blogs from "./Features/Journals.jsx/Blogs";
 import ProductPage from "./Features/Products/ProductPage";
 
 function App() {
+  // const [products, setProducts] = useState("");
+  // useEffect(function () {
+  //   fetch("http://localhost:3000/products")
+  //     .then((response) => response.json())
+  //     .then((data) => setProducts(data.products))
+  //     .catch((error) => console.error(error));
+  // }, []);
   return (
     <>
       <BrowserRouter>

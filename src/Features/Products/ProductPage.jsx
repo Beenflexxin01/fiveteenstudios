@@ -10,26 +10,41 @@ import f42 from "../../Images/f42.jpeg";
 import f43 from "../../Images/f43.jpeg";
 import f52 from "../../Images/f52.jpeg";
 import Footer from "../../UI/Footer";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 // import { products } from "../../data/fiveteendata.json";
 
 function ProductPage() {
+  const [products, setProducts] = useState("");
+  useEffect(function () {
+    async function products() {
+      const res = await fetch("http://localhost:3000/products");
+      const { data } = res.json();
+      return data;
+      // const res = await fetch("http://localhost:3000/products")
+      // .then((response) => response.json())
+      // .then((data) => setProducts(data.products))
+      // .catch((error) => console.error(error));
+    }
+  }, []);
   return (
     <>
+      <h1>{products}</h1>
+
       <div className="grid-2 product--grid">
         <div className="grid-2-cols checkout-grid product-grid">
           <div className="product-img">
             <img src={f78} alt="COZY - SZN" className="product-image" />
           </div>
           <div className="product-image-grid">
-            {/* <div className="product-img-grid">
-                
-                <img src={imageCover} alt="" className="img-grid-1" />
-              </div>
-              <div className="img-grid">
-                <img src={imageCover} alt="" className="img-grid-1" />
-              </div> */}
+            <div className="product-img-grid">
+              {/* <img src={imageCover} alt="" className="img-grid-1" /> */}
+            </div>
             <div className="img-grid">
+              {/* <img src={imageCover} alt="" className="img-grid-1" /> */}
+            </div>
+            {/* <div className="img-grid">
               <img src={f72} alt="" className="img-grid-1" />
             </div>
             <div className="img-grid">
@@ -46,19 +61,21 @@ function ProductPage() {
             </div>
             <div className="img-grid">
               <img src={f17} alt="" className="img-grid-1" />
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="grid-2-cols checkout-grid product-grid">
           <div className="cozy">
-            <p className="text-descriptions"> FIVETEEN STUDIOS</p>
+            {/* <p className="text-descriptions"> FIVETEEN STUDIOS</p> */}
+            {/* <p className="text-descriptions"> {products.textDescription}</p> */}
             <h2 className="secondary-header h1">COZY SZN</h2>
           </div>
-          <p className="text-description">
+          {/* <p className="text-description">
             Hoodie sweatshirt made of cotton with brushed interior. Collar with
             hood and long sleeves. Fribt pouch pocket. Rib trim.
-          </p>
+          </p> */}
+          {/* <p className="text-description">{products.description}</p> */}
           <p className="text-description">$60.00 USD</p>
           <p className="text-descriptions">
             <Link to="https://fiveteenstudios.com/policies/shipping-policy">
