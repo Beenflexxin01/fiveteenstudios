@@ -11,26 +11,24 @@ import f43 from "../../Images/f43.jpeg";
 import f52 from "../../Images/f52.jpeg";
 import Footer from "../../UI/Footer";
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 // import { products } from "../../data/fiveteendata.json";
 
 function ProductPage() {
-  const [products, setProducts] = useState("");
+  const [products, setProducts] = useState([]);
   useEffect(function () {
-    async function products() {
-      const res = await fetch("http://localhost:3000/products");
-      const { data } = res.json();
-      return data;
-      // const res = await fetch("http://localhost:3000/products")
-      // .then((response) => response.json())
-      // .then((data) => setProducts(data.products))
-      // .catch((error) => console.error(error));
-    }
+    fetch("http://localhost:3000/api/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data.products))
+      .catch((error) => console.error(error));
   }, []);
+
   return (
     <>
-      <h1>{products}</h1>
+      <div>
+        <h1>{products}</h1>
+      </div>
 
       <div className="grid-2 product--grid">
         <div className="grid-2-cols checkout-grid product-grid">

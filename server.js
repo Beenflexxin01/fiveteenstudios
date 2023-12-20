@@ -1,13 +1,10 @@
-// import { mongoose } from "mongoose";
-
-// import { dotenv } from "dotenv";
-
-// import { app } from "./src/App";
 const mongoose = require("mongoose");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const productRouter = require("./Routes/ProductRoutes");
+const catchAsync = require("./src/Controller/catchAsync");
+const Products = require("./src/models/ProductModel");
+
 const app = express();
 // const app = require("./app");
 // app.use(dotenv());
@@ -21,6 +18,12 @@ app.use(
     origin: "http://localhost:5173",
   })
 );
+
+// app.get("/products", async (req, res) => {
+//   res.status(200).json({
+//     status: "success",
+//   });
+// });
 
 process.on("UncaughtException", (err) => {
   console.log(err.message);
@@ -37,7 +40,6 @@ const DB = process.env.DATABASE.replace(
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
   })
   .then(() => console.log("DB CONNECTION SUCCESSFUL 😉😎!"));
 
@@ -53,19 +55,17 @@ process.on("unhandledRejection", (err) => {
   server.close(() => process.exit(1));
 });
 
-// const Products = require("./models/ProductModel");
+app.get("/api/products", async (req, res) => {
+  try {
+    const products = await Products.find();
+    res.json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
 
-// app.get("/api/products", async (req, res) => {
-//   try {
-//     const products = await Products.find();
-//     res.json(products);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send("Server Error");
-//   }
-// });
-
-app.use("/products", productRouter);
+// app.use("/api/products", productRouter);
 
 process.on("SIGTERM", function () {
   console.log("🤗 SIGTERM RECEIVED, Shutting down gracefully");
