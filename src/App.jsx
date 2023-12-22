@@ -15,6 +15,17 @@ import SignUp from "./Page/SignUp";
 import PasswordReset from "./Page/PasswordReset";
 import Blogs from "./Features/Journals.jsx/Blogs";
 import ProductPage from "./Features/Products/ProductPage";
+import Search from "./Page/Search";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const querryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 0,
+    },
+  },
+});
 
 function App() {
   // const [products, setProducts] = useState("");
@@ -26,27 +37,31 @@ function App() {
   // }, []);
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route index element={<Navigate replace to="home" />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="home" element={<Home />} />
-            <Route path="blog" element={<Journals />} />
-            <Route path="products" element={<Products />} />
-            <Route path="story" element={<Story />} />
-            <Route path="login" element={<Login />} />
-            <Route path="account/register" element={<SignUp />} />
-            <Route path="account/recover" element={<PasswordReset />} />
-            <Route path="productPage" element={<ProductPage />} />
-            <Route path="blogs/designs" element={<Blogs />} />
-            <Route path="collections/ss" element={<Summer />} />
-            <Route path="collections/aw" element={<Autumn />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      
+      <QueryClientProvider client={querryClient}>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<AppLayout />}>
+              <Route index element={<Navigate replace to="home" />} />
+              <Route path="cart" element={<Cart />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="home" element={<Home />} />
+              <Route path="blog" element={<Journals />} />
+              <Route path="products" element={<Products />} />
+              <Route path="story" element={<Story />} />
+              <Route path="login" element={<Login />} />
+              <Route path="search" element={<Search />} />
+              <Route path="account/register" element={<SignUp />} />
+              <Route path="account/recover" element={<PasswordReset />} />
+              <Route path="productPage" element={<ProductPage />} />
+              <Route path="blogs/designs" element={<Blogs />} />
+              <Route path="collections/ss" element={<Summer />} />
+              <Route path="collections/aw" element={<Autumn />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </QueryClientProvider>
     </>
   );
 }

@@ -1,15 +1,11 @@
 const mongoose = require("mongoose");
+const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const catchAsync = require("./src/Controller/catchAsync");
 const Products = require("./src/models/ProductModel");
 
 const app = express();
-// const app = require("./app");
-// app.use(dotenv());
-
-// app.use(App);
 
 app.use(express.json());
 app.use(
@@ -19,11 +15,7 @@ app.use(
   })
 );
 
-// app.get("/products", async (req, res) => {
-//   res.status(200).json({
-//     status: "success",
-//   });
-// });
+app.use(express.static(path.join(__dirname, "main")));
 
 process.on("UncaughtException", (err) => {
   console.log(err.message);

@@ -12,6 +12,7 @@ import f52 from "../../Images/f52.jpeg";
 import Footer from "../../UI/Footer";
 import { useEffect, useState } from "react";
 // import axios from "axios";
+import { useProducts } from "../../Services/useProducts";
 
 // import { products } from "../../data/fiveteendata.json";
 
@@ -24,45 +25,46 @@ function ProductPage() {
       .catch((error) => console.error(error));
   }, []);
 
+  // const { products } = useProducts();
+  // const {  description, price } = products;
   return (
     <>
-      <div>
-        <h1>{products}</h1>
-      </div>
-
+      {products.map((product) => { 
+        <h1>{product.description }</h1>
+      })}
       <div className="grid-2 product--grid">
+
         <div className="grid-2-cols checkout-grid product-grid">
           <div className="product-img">
             <img src={f78} alt="COZY - SZN" className="product-image" />
           </div>
           <div className="product-image-grid">
             <div className="product-img-grid">
-              {/* <img src={imageCover} alt="" className="img-grid-1" /> */}
+              {/* <img src={product.image} alt="" className="img-grid-1" /> */}
             </div>
             <div className="img-grid">
               {/* <img src={imageCover} alt="" className="img-grid-1" /> */}
             </div>
             {/* <div className="img-grid">
-              <img src={f72} alt="" className="img-grid-1" />
-            </div>
-            <div className="img-grid">
-              <img src={f74} alt="" className="img-grid-1" />
-            </div>
-            <div className="img-grid">
-              <img src={f75} alt="" className="img-grid-1" />
-            </div>
-            <div className="img-grid">
-              <img src={f78} alt="" className="img-grid-1" />
-            </div>
-            <div className="img-grid">
-              <img src={f71} alt="" className="img-grid-1" />
-            </div>
-            <div className="img-grid">
-              <img src={f17} alt="" className="img-grid-1" />
-            </div> */}
+<img src={f72} alt="" className="img-grid-1" />
+</div>
+<div className="img-grid">
+<img src={f74} alt="" className="img-grid-1" />
+</div>
+<div className="img-grid">
+<img src={f75} alt="" className="img-grid-1" />
+</div>
+<div className="img-grid">
+<img src={f78} alt="" className="img-grid-1" />
+</div>
+<div className="img-grid">
+<img src={f71} alt="" className="img-grid-1" />
+</div>
+<div className="img-grid">
+<img src={f17} alt="" className="img-grid-1" />
+</div> */}
           </div>
         </div>
-
         <div className="grid-2-cols checkout-grid product-grid">
           <div className="cozy">
             {/* <p className="text-descriptions"> FIVETEEN STUDIOS</p> */}
@@ -70,9 +72,9 @@ function ProductPage() {
             <h2 className="secondary-header h1">COZY SZN</h2>
           </div>
           {/* <p className="text-description">
-            Hoodie sweatshirt made of cotton with brushed interior. Collar with
-            hood and long sleeves. Fribt pouch pocket. Rib trim.
-          </p> */}
+Hoodie sweatshirt made of cotton with brushed interior. Collar with
+hood and long sleeves. Fribt pouch pocket. Rib trim.
+</p> */}
           {/* <p className="text-description">{products.description}</p> */}
           <p className="text-description">$60.00 USD</p>
           <p className="text-descriptions">
