@@ -1,44 +1,50 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
-  textDescription: {
-    type: String,
-  },
+const productSchema = new mongoose.Schema(
+  {
+    textDescription: {
+      type: String,
+    },
 
-  title: {
-    type: String,
-  },
+    tjitle: {
+      type: String,
+    },
 
-  description: {
-    type: String,
-  },
+    description: {
+      type: String,
+    },
 
-  price: {
-    type: Number,
-  },
+    price: {
+      type: Number,
+    },
 
-  shipPrice: {
-    type: String,
-  },
+    shipPrice: {
+      type: String,
+    },
 
-  color: {
-    type: String,
-  },
+    color: {
+      type: String,
+    },
 
-  size: {
-    type: String,
-  },
+    size: {
+      type: String,
+    },
 
-  paymentOption: {
-    type: String,
-  },
+    paymentOption: {
+      type: String,
+    },
 
-  imageCover: [String],
+    imageCover: [String],
 
-  image: {
-    type: String,
+    image: {
+      type: String,
+    },
   },
-});
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
+);
 
 const Products = mongoose.model("Products", productSchema);
 

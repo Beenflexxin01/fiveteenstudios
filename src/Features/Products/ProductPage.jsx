@@ -29,9 +29,7 @@ function ProductPage() {
   // const {  description, price } = products;
   return (
     <>
-      {products.map((product) => { 
-        <h1>{product.description }</h1>
-      })}
+     
       <div className="grid-2 product--grid">
 
         <div className="grid-2-cols checkout-grid product-grid">
@@ -45,7 +43,7 @@ function ProductPage() {
             <div className="img-grid">
               {/* <img src={imageCover} alt="" className="img-grid-1" /> */}
             </div>
-            {/* <div className="img-grid">
+            <div className="img-grid">
 <img src={f72} alt="" className="img-grid-1" />
 </div>
 <div className="img-grid">
@@ -62,7 +60,7 @@ function ProductPage() {
 </div>
 <div className="img-grid">
 <img src={f17} alt="" className="img-grid-1" />
-</div> */}
+</div>
           </div>
         </div>
         <div className="grid-2-cols checkout-grid product-grid">
@@ -71,10 +69,10 @@ function ProductPage() {
             {/* <p className="text-descriptions"> {products.textDescription}</p> */}
             <h2 className="secondary-header h1">COZY SZN</h2>
           </div>
-          {/* <p className="text-description">
+          <p className="text-description">
 Hoodie sweatshirt made of cotton with brushed interior. Collar with
 hood and long sleeves. Fribt pouch pocket. Rib trim.
-</p> */}
+</p>
           {/* <p className="text-description">{products.description}</p> */}
           <p className="text-description">$60.00 USD</p>
           <p className="text-descriptions">
