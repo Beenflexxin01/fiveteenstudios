@@ -1,7 +1,7 @@
 const fs = require("fs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const Products = require("../src/models/ProductModel");
+const Products = require("../models/ProductModel");
 
 dotenv.config({ path: "./config.env" });
 
@@ -32,7 +32,7 @@ const importData = async function () {
 
 const deleteData = async function () {
   try {
-    await Products.create(products);
+    await Products.deleteMany();
     console.log("Data successfully deleted ❌🦀!!!");
   } catch (err) {
     console.log(err.name);

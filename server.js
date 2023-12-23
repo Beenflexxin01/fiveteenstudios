@@ -3,7 +3,7 @@ const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const Products = require("./src/models/ProductModel");
+const Products = require("./public/models/ProductModel");
 
 const app = express();
 

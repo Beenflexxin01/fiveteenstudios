@@ -29,7 +29,7 @@ function Search() {
     <>
       {/* <h1>{textDescription}</h1> */}
       {/* <h1>{title}</h1> */}
-      <h1>{console.log(products.description)}</h1>
+      <h1>`${console.(products.description)}`</h1>
       {/* <h1>{price}</h1> */}
       {/* <h1>{shipPrice}</h1> */}
     </>
