@@ -53,7 +53,7 @@ li {
 }
 
 .logo {
-  margin-left: 27rem;
+  margin-left: 8rem;
 }
 
 .main-nav-ul {
@@ -294,14 +294,14 @@ textarea {
 }
 
 .footer-image {
-  margin-left: 10%;
+  margin-left: 8%;
 }
 
 .footer-nav-ul {
   display: flex;
   gap: 4rem;
   align-items: center;
-  margin-left: 30%;
+  margin-left: 18%;
   text-align: center;
   margin-top: 5rem;
 }
