@@ -3,7 +3,8 @@ const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const Products = require("./public/models/ProductModel");
+const Products = require("./models/ProductListModel");
+const Blog = require("./models/blogDesignModel");
 
 const app = express();
 
@@ -15,7 +16,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "main")));
+// app.use(express.static(path.join(__dirname, "main")));
 
 process.on("UncaughtException", (err) => {
   console.log(err.message);
@@ -57,7 +58,15 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
-// app.use("/api/products", productRouter);
+app.get("/api/blogs", async (req, res) => {
+  try {
+    const blogs= await Blog.find();
+    res.json(blogs);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
 
 process.on("SIGTERM", function () {
   console.log("🤗 SIGTERM RECEIVED, Shutting down gracefully");

@@ -1,0 +1,87 @@
+[
+  {
+    "title": "COZY SZN",
+    "price": 55.0,
+    "image": "/src/Images/f22.jpeg"
+  },
+  {
+    "title": "FREEDOM (LIMITED EDITION)",
+    "price": 42.0,
+    "image": "/src/Images/f34.jpeg"
+  },
+  {
+    "title": "SLPLS NIGHTS",
+    "price": 25.0,
+    "image": "/src/Images/f3.jpeg"
+  },
+  {
+    "title": "TERRA ORRANGE",
+    "price": 38.0,
+    "image": "/src/Images/f15.jpeg"
+  },
+  {
+    "title": "COZY SZN",
+    "price": 55.0,
+    "image": "/src/Images/f7.jpeg"
+  },
+  {
+    "title": "FVT CLASSIC",
+    "price": 28.0,
+    "image": "/src/Images/f9.jpeg"
+  },
+  {
+    "title": "PSE SHORTS",
+    "price": 30.0,
+    "image": "/src/Images/f39.jpeg"
+  },
+  {
+    "title": "PALMS BLANC",
+    "price": 38.0,
+    "image": "/src/Images/f48.jpeg"
+  },
+  {
+    "title": "FVT LAGOS",
+    "price": 28.0,
+    "image": "/src/Images/f40.jpeg"
+  },
+  {
+    "title": "XV PALMS",
+    "price": 30.0,
+    "image": "/src/Images/f43.jpeg"
+  },
+  {
+    "title": "XV PALMS",
+    "price": 30.0,
+    "image": "/src/Images/f42.jpeg"
+  },
+  {
+    "title": "COZY SZN",
+    "price": 55.0,
+    "image": "/src/Images/f41.jpeg"
+  },
+  {
+    "title": "XV SWEATPANTS",
+    "price": 48.0,
+    "image": "/src/Images/f44.jpeg"
+  },
+  {
+    "title": "TERRA ORRANGE",
+    "price": 38.0,
+    "image": "/src/Images/f45.jpeg"
+  },
+  {
+    "title": "SAC A DOS",
+    "price": 64.0,
+    "image": "/src/Images/f46.jpeg"
+  },
+  {
+    "title": "XMILEY TOTE",
+    "price": 28.0,
+    "image": "/src/Images/f46.jpeg"
+  },
+  {
+    "title": "PSE SHORTS MINI",
+    "price": 30.0,
+    "image": "/src/Images/f47.jpeg"
+  }
+]

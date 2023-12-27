@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import ProductList from "../Features/Products/ProductList";
 
-function Search() {
+function useProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(function () {
-    async function getProductData() {
+    async function getProductDetails() {
       try {
         const res = await fetch("http://localhost:5000/api/products");
         if (!res.ok)
@@ -20,19 +19,24 @@ function Search() {
         console.log(err);
       }
     }
-    getProductData();
+    getProductDetails();
   }, []);
 
   return (
     <>
       <div className="text-description">
-        {products &&
-          products.map(function (product) {
-            return <ProductList key={product._id} product={product} />;
-          })}
+        {products.map(function (product) {
+          return product.textDescription;
+        })}
+        {products.map(function (product) {
+          return product.description;
+        })}
+        {products.map(function (product) {
+          return product.image;
+        })}
       </div>
     </>
   );
 }
 
-export default Search;
+export default useProducts;

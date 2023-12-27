@@ -1,7 +1,8 @@
 const fs = require("fs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const Products = require("../models/ProductModel");
+const Products = require("../models/ProductListModel");
+const Blog = require("../models/blogDesignModel");
 
 dotenv.config({ path: "./config.env" });
 
@@ -17,12 +18,16 @@ mongoose
   .then(() => console.log("DB SUCCESSFULLY CONNECTED!!!"));
 
 const products = JSON.parse(
-  fs.readFileSync(`${__dirname}/fiveteendata.json`, `utf-8`)
+  fs.readFileSync(`${__dirname}/productListData.json`, `utf-8`)
+);
+const blog = JSON.parse(
+  fs.readFileSync(`${__dirname}/blogListData.json`, `utf-8`)
 );
 
 const importData = async function () {
   try {
     await Products.create(products);
+    await Blog.create(blog);
     console.log("Data successfully imported 😀😎!!!");
   } catch (err) {
     console.log(err);
@@ -33,6 +38,7 @@ const importData = async function () {
 const deleteData = async function () {
   try {
     await Products.deleteMany();
+    await Blog.deleteMany();
     console.log("Data successfully deleted ❌🦀!!!");
   } catch (err) {
     console.log(err.name);
