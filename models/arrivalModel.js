@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
+const arrivalSchema = new mongoose.Schema({
   title: String,
   default: String,
   price: String,
   oldPrice: String,
   image: String,
+  hiddenImage: String,
   imageCover: [String],
   description: String,
   size: String,
@@ -24,6 +25,6 @@ const productSchema = new mongoose.Schema({
   soldOut: String,
 });
 
-const Products = mongoose.model("products", productSchema);
+const Arrivals = mongoose.model("arrivals", arrivalSchema);
 
-module.exports = Products;
+module.exports = Arrivals;

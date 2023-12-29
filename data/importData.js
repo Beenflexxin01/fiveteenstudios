@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Products = require("../models/ProductListModel");
 const Blog = require("../models/blogDesignModel");
+const Arrivals = require("../models/arrivalModel");
+const Features = require("../models/featureProductModel");
+const AllFeatures = require("../models/allFeatureModel");
 
 dotenv.config({ path: "./config.env" });
 
@@ -23,11 +26,23 @@ const products = JSON.parse(
 const blog = JSON.parse(
   fs.readFileSync(`${__dirname}/blogListData.json`, `utf-8`)
 );
+const arrivals = JSON.parse(
+  fs.readFileSync(`${__dirname}/arrivals.json`, `utf-8`)
+);
+const features = JSON.parse(
+  fs.readFileSync(`${__dirname}/featureProducts.json`, `utf-8`)
+);
+const allFeatures = JSON.parse(
+  fs.readFileSync(`${__dirname}/allFeatures.json`, `utf-8`)
+);
 
 const importData = async function () {
   try {
     await Products.create(products);
     await Blog.create(blog);
+    await Arrivals.create(arrivals);
+    await Features.create(features);
+    await AllFeatures.create(allFeatures);
     console.log("Data successfully imported 😀😎!!!");
   } catch (err) {
     console.log(err);
@@ -39,6 +54,9 @@ const deleteData = async function () {
   try {
     await Products.deleteMany();
     await Blog.deleteMany();
+    await Arrivals.deleteMany();
+    await Features.deleteMany();
+    await AllFeatures.deleteMany();
     console.log("Data successfully deleted ❌🦀!!!");
   } catch (err) {
     console.log(err.name);

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
+const featureSchema = new mongoose.Schema({
   title: String,
   default: String,
   price: String,
@@ -24,6 +24,6 @@ const productSchema = new mongoose.Schema({
   soldOut: String,
 });
 
-const Products = mongoose.model("products", productSchema);
+const AllFeatures = mongoose.model("allFeatures", featureSchema);
 
-module.exports = Products;
+module.exports = AllFeatures;

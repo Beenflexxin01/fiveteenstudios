@@ -1,5 +1,5 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
 import AppLayout from "./UI/AppLayout";
 import Home from "./Page/Home";
 import Products from "./Page/Products";
@@ -10,14 +10,17 @@ import Story from "./Page/Story";
 import Contact from "./Page/Contact";
 import PageNotFound from "./Page/PageNotFound";
 import Login from "./Page/Login";
-import Cart from "./Page/Cart";
+import Cart from "./Features/Cart/Cart";
 import SignUp from "./Page/SignUp";
 import PasswordReset from "./Page/PasswordReset";
 import Blogs from "./Features/Journals.jsx/Blogs";
 import ProductPage from "./Features/Products/ProductPage";
+import AllFeatureProducts from "./Features/Home/FeatureProducts/AllFeatureProducts";
 import Search from "./Page/Search";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ArrivalDatas from "./Features/Home/Arrivals/ArrivalDatas";
+import FeatureProductDetails from "./Features/Home/FeatureProducts/FeatureProductDetails";
+import AllfeatureProductDetails from "./Features/Home/FeatureProducts/AllfeatureProductDetails";
 
 const querryClient = new QueryClient({
   defaultOptions: {
@@ -28,16 +31,8 @@ const querryClient = new QueryClient({
 });
 
 function App() {
-  // const [products, setProducts] = useState("");
-  // useEffect(function () {
-  //   fetch("http://localhost:3000/products")
-  //     .then((response) => response.json())
-  //     .then((data) => setProducts(data.products))
-  //     .catch((error) => console.error(error));
-  // }, []);
   return (
     <>
-      
       <QueryClientProvider client={querryClient}>
         <BrowserRouter>
           <Routes>
@@ -51,10 +46,23 @@ function App() {
               <Route path="story" element={<Story />} />
               <Route path="login" element={<Login />} />
               <Route path="search" element={<Search />} />
+              <Route
+                path="AllFeatureProducts"
+                element={<AllFeatureProducts />}
+              />
               <Route path="account/register" element={<SignUp />} />
               <Route path="account/recover" element={<PasswordReset />} />
-              <Route path="productPage" element={<ProductPage />} />
-              <Route path="blogs/designs" element={<Blogs />} />
+              <Route path="productPage/:id" element={<ProductPage />} />
+              <Route path="arrivalData/:id" element={<ArrivalDatas />} />
+              <Route
+                path="featureData/:id"
+                element={<FeatureProductDetails />}
+              />
+              <Route
+                path="allfeatureData/:id"
+                element={<AllfeatureProductDetails />}
+              />
+              <Route path="blogs/designs/:id" element={<Blogs />} />
               <Route path="collections/ss" element={<Summer />} />
               <Route path="collections/aw" element={<Autumn />} />
               <Route path="*" element={<PageNotFound />} />

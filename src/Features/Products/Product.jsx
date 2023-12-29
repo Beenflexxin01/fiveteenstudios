@@ -5,7 +5,6 @@ import ProductList from "./ProductList";
 
 function Products() {
   const [products, setProducts] = useState([]);
-
   useEffect(function () {
     async function getProductList() {
       try {
@@ -69,6 +68,7 @@ function Products() {
             products.map(function (product) {
               return <ProductList key={product._id} product={product} />;
             })}
+        
         </div>
       </div>
     </>

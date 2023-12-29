@@ -4,7 +4,11 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const Products = require("./models/ProductListModel");
+const Arrivals = require("./models/arrivalModel");
 const Blog = require("./models/blogDesignModel");
+const Features = require("./models/featureProductModel");
+const AllFeatures = require("./models/allFeatureModel");
+const { useParams } = require("react-router-dom");
 
 const app = express();
 
@@ -58,15 +62,103 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
+app.get("/api/arrivals", async (req, res) => {
+  try {
+    const arrivals = await Arrivals.find();
+    res.json(arrivals);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/arrivals/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const arrivals = await Arrivals.findById(id);
+    res.json(arrivals);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/products/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const products = await Products.findById(id);
+    res.json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/features", async (req, res) => {
+  try {
+    const features = await Features.find();
+    res.json(features);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/features/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const features = await Features.findById(id);
+    res.json(features);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
 app.get("/api/blogs", async (req, res) => {
   try {
-    const blogs= await Blog.find();
+    const blogs = await Blog.find();
     res.json(blogs);
   } catch (error) {
     console.error(error);
     res.status(500).send("Server Error");
   }
 });
+
+app.get("/api/blogs/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const blogs = await Blog.findById(id);
+    res.json(blogs);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/allfeatures", async (req, res) => {
+  try {
+    const allFeature = await AllFeatures.find();
+    res.json(allFeature);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/allfeatures/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const allFeature = await AllFeatures.findById(id);
+    res.json(allFeature);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
 
 process.on("SIGTERM", function () {
   console.log("🤗 SIGTERM RECEIVED, Shutting down gracefully");

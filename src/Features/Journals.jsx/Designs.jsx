@@ -13,6 +13,7 @@ function Designs() {
             "Something went wrong while loading the blogs from the database."
           );
         const data = await res.json();
+
         if (data.Response === "False") throw new Error("Blogs not found");
         setBlogs(data);
       } catch (err) {

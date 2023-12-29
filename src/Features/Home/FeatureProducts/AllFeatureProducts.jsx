@@ -1,32 +1,39 @@
+import { useState, useEffect } from "react";
 import { HiOutlineChevronDown } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import NewArrivals from "../UI/NewArrivals";
+import AllFeatureProductData from "./AllFeatureProductData";
+import Footer from "../../../UI/Footer";
 
-function Products() {
-  const [arrivals, setArrivals] = useState([]);
+function AllFeatureProducts() {
+  const [allFeatures, setAllFeatures] = useState([]);
 
   useEffect(function () {
-    async function getArrivals() {
+    async function getAllFeatures() {
       try {
-        const res = await fetch(`http://localhost:5000/api/arrivals`);
+        const res = await fetch("http://localhost:5000/api/allfeatures");
         if (!res.ok)
-          throw new Error("There is an error while loading the arrivals");
+          throw new Error(
+            "There was an issue while trying to display all features"
+          );
 
         const data = await res.json();
-        if (data.Resonse === "False") throw new Error("Error loading arrivals");
-        setArrivals(data);
+
+        if (data.Response === "False")
+          throw new Error(
+            "Error while loading all features!! Try again later."
+          );
+
+        setAllFeatures(data);
       } catch (err) {
         console.log(err);
       }
     }
-    getArrivals();
+    getAllFeatures();
   }, []);
   return (
     <>
       <div className="container">
-        <h1 className="primary-header h1">A/W</h1>
-        <p className="secondary-header ">Autumn/Winter Collection.</p>
+        <h2 className="secondary-header ">FEATURED PRODUCTS</h2>
         <div className="filters">
           <ul className="filter-ul">
             <div className="filter">
@@ -58,18 +65,21 @@ function Products() {
             </div>
           </ul>
         </div>
-
         <div className="grid-4">
-          {arrivals &&
-            arrivals.map((arrivalData) => {
+          {allFeatures &&
+            allFeatures.map((allfeatures) => {
               return (
-                <NewArrivals arrivalData={arrivalData} key={arrivalData._id} />
+                <AllFeatureProductData
+                  allfeatures={allfeatures}
+                  key={allfeatures._id}
+                />
               );
             })}
         </div>
       </div>
+        <Footer />
     </>
   );
 }
 
-export default Products;
+export default AllFeatureProducts;

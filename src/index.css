@@ -46,27 +46,29 @@ li {
 
 .main-nav {
   background-color: #000;
-  padding: 2rem;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
 .logo {
-  margin-left: 8rem;
+  margin-left: 28rem;
+  height: 4rem;
+  width: 5rem;
 }
 
 .main-nav-ul {
   display: flex;
-  gap: 4rem;
   align-items: center;
 }
 
 .main-nav-link {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #fff;
   opacity: 75%;
   text-decoration: none;
+  padding: 1.3rem;
 }
 
 .main-nav-link:hover {
@@ -75,9 +77,7 @@ li {
 
 .others {
   display: flex;
-  gap: 4rem;
   align-items: center;
-  /* text-align: center; */
   margin-left: auto;
 }
 
@@ -131,8 +131,8 @@ li {
 }
 
 .icons {
-  height: 4rem;
-  width: 3rem;
+  height: 3rem;
+  width: 2rem;
 }
 
 .romans {
@@ -146,7 +146,16 @@ li {
 }
 
 .text-description {
-  font-size: 2rem;
+  font-size: 1.7rem;
+}
+
+/* .blog-description {
+  font-size: 1.7rem;
+} */
+
+.blog-descriptions {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .spacing {
@@ -185,6 +194,10 @@ li {
   overflow: hidden;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .grid-4-image {
   height: 50vh;
   width: 90%;
@@ -197,12 +210,18 @@ li {
 }
 
 .secondary-header {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #000;
 }
 
 .text-align {
   text-align: center;
+  font-size: 1rem;
+}
+
+.product-text {
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .hidden {
@@ -229,7 +248,7 @@ li {
 
 .btn-view {
   background-color: #000;
-  margin: 3rem 0 0 45%;
+  margin: 3rem 0 0 40%;
   width: 25rem;
 }
 
@@ -428,6 +447,7 @@ ion-icon {
 .design-text {
   text-align: justify;
   width: 95%;
+  line-height: 1.8;
 }
 
 .login {
@@ -670,11 +690,11 @@ ion-icon {
 }
 
 .input-blog {
-  width: 56%;
+  width: 90%;
 }
 
 .blog-form {
-  margin: 2rem 40rem;
+  margin: 2rem 30rem;
 }
 
 .blog-text {
@@ -719,6 +739,19 @@ ion-icon {
   grid-template-columns: 60% 40%;
 }
 
+.price-group {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.sale {
+  background-color: #008000;
+  padding: 0 1rem;
+  color: #fff;
+  border-radius: 10rem;
+}
+
 .cozy {
   line-height: 0.1;
   margin-bottom: 7rem;
@@ -727,6 +760,16 @@ ion-icon {
 .product-size {
   display: flex;
   gap: 5rem;
+}
+
+.color {
+  background-color: #000;
+  background-color: #008000;
+  border-radius: 10rem;
+  padding: 1rem 1.5rem;
+  /* padding: 0 1rem; */
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 .product-image-grid {
@@ -780,6 +823,7 @@ ion-icon {
 .btn-cart {
   border: 1px solid #000;
   color: #000;
+  padding: 1rem;
 }
 
 .btn-cart:hover {
@@ -789,6 +833,7 @@ ion-icon {
 
 .btn-pay {
   width: 100%;
+  padding: 1rem;
 }
 
 .buy {
@@ -798,4 +843,16 @@ ion-icon {
 .payment-link {
   text-align: center;
   margin-top: 3rem;
+}
+
+.loader {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 4.8rem;
+}
+
+.italic {
+  font-style: italic;
 }
