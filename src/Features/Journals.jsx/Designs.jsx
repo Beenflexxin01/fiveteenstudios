@@ -27,7 +27,7 @@ function Designs() {
     <>
       <div className="container design-container">
         <h1 className="primary-header h1">Designs</h1>
-        <div className="grid-2">
+        <div className="grid-2 blog-grid">
           {blogs &&
             blogs.map((blogs) => {
               return <BlogData blogs={blogs} key={blogs._id} />;

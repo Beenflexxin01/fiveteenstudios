@@ -98,7 +98,7 @@ function Blogs() {
               <p className="text-description blog-description blog-text ">
                 {logo}
               </p>
-              <img src={logoImg} alt="" />
+              <img src={logoImg} alt={title} className="blog-img" />
               <h2 className="secondary-header">{theDesign}</h2>
               <p className="text-description blog-description blog-text">
                 {design}
@@ -106,7 +106,7 @@ function Blogs() {
               <p className="text-description blog-description blog-text">
                 {design2}
               </p>
-              <img src={designImg} alt={title} />
+              <img src={designImg} alt={title} className="blog-img" />
               <h2 className="secondary-header">{palms}</h2>
               <p className="text-description blog-description blog-text">
                 {pse}
@@ -115,12 +115,12 @@ function Blogs() {
               <p className="text-description blog-description blog-text">
                 {inspiration}
               </p>
-              <img src={inspirationImg} alt={title} />
+              <img src={inspirationImg} alt={title} className="blog-img" />
               <h2 className="secondary-header">{DesignProcess}</h2>
               <p className="text-description blog-description blog-text">
                 {designProcess}
               </p>
-              <img src={designProcessImg} alt="" />
+              <img src={designProcessImg} alt={title} className="blog-img" />
               <h2 className="secondary-header">{sigMean}</h2>
               <p className="text-description blog-description blog-text">
                 {significance}
@@ -140,7 +140,7 @@ function Blogs() {
                 <strong>{print} </strong>
                 {printing}
               </p>
-              <img src={img} alt="" />
+              <img src={img} alt={title} className="blog-img" />
               <h2 className="secondary-header">{Feedback}</h2>
               <p className="text-description blog-description blog-text">
                 {feedback}

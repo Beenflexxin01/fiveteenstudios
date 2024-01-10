@@ -8,7 +8,7 @@ const Arrivals = require("./models/arrivalModel");
 const Blog = require("./models/blogDesignModel");
 const Features = require("./models/featureProductModel");
 const AllFeatures = require("./models/allFeatureModel");
-const { useParams } = require("react-router-dom");
+const SummerCollection = require("./models/summerCollectionModel");
 
 const app = express();
 
@@ -159,6 +159,36 @@ app.get("/api/allfeatures/:id", async (req, res) => {
   }
 });
 
+app.get("/api/summer", async (req, res) => {
+  try {
+    const summerCollection = await SummerCollection.find();
+    res.json(summerCollection);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.get("/api/summer/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const summerCollection = await SummerCollection.findById(id);
+    res.json(summerCollection);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
+// app.get("/api/button", async (req, res) => {
+//   try {
+//     const button = await Button.find();
+//     res.json(button);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send("Server Error");
+//   }
+// });
 
 process.on("SIGTERM", function () {
   console.log("🤗 SIGTERM RECEIVED, Shutting down gracefully");

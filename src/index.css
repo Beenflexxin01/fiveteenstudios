@@ -21,6 +21,24 @@ li {
   list-style: none;
 }
 
+.btn-mobile-nav {
+  border: none;
+  background-color: transparent;
+  /* background-color: red; */
+  cursor: pointer;
+  /* display: none; */
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #eee;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 .container {
   margin: 5rem;
   padding: 3rem;
@@ -50,15 +68,22 @@ li {
   position: sticky;
   top: 0;
   z-index: 1;
+  /* display: flex; */
+  /* align-items: center; */
 }
 
 .logo {
-  margin-left: 28rem;
+  margin-left: 21rem;
   height: 4rem;
   width: 5rem;
+  cursor: pointer;
 }
 
-.main-nav-ul {
+.shop-btn {
+  cursor: pointer;
+}
+
+.main-nav-ul, .div-nav {
   display: flex;
   align-items: center;
 }
@@ -175,7 +200,7 @@ li {
 
 .grid-image {
   width: 80%;
-  height: 90vh;
+  height: 70vh;
   border-radius: 9px;
   margin: 0 6rem;
 }
@@ -190,7 +215,7 @@ li {
 }
 
 .grid-4-cols {
-  margin: 1.5rem 2rem 1.5rem 0;
+  margin: 1.5rem 1rem 1rem 0;
   overflow: hidden;
 }
 
@@ -248,7 +273,7 @@ li {
 
 .btn-view {
   background-color: #000;
-  margin: 3rem 0 0 40%;
+  margin: 0 0 0 40%;
   width: 25rem;
 }
 
@@ -286,7 +311,7 @@ textarea {
   border: none;
   outline: none;
   position: absolute;
-  left: 57%;
+  left: 63%;
   top: 35%;
   width: 15rem;
   cursor: pointer;
@@ -332,6 +357,10 @@ textarea {
 
 .footer-icon {
   padding: 1rem;
+}
+
+.footer-form {
+  width: 40%;
 }
 
 .nav-link {
@@ -456,7 +485,7 @@ ion-icon {
 }
 
 .btn-sign-in {
-  margin: 1.5rem auto;
+  margin: 1.5rem;
   width: 25rem;
 }
 
@@ -526,13 +555,18 @@ ion-icon {
 
 .checkout-grid {
   padding: 7rem;
-}
-
-.checkout_2 {
-  background-color: #dbd5d56e;
+  background-color: #e5e3e30b;
 }
 
 .checkout-grid:hover {
+  transform: none;
+}
+
+.checkout_2 {
+  background-color: #dbd5d51d;
+}
+
+.-grid:hover {
   transform: none;
 }
 
@@ -685,7 +719,6 @@ ion-icon {
 
 .blog-collection {
   padding: 4rem;
-  width: 100%;
   margin-top: 9rem;
 }
 
@@ -710,6 +743,10 @@ ion-icon {
 .blog-img {
   height: 50rem;
   width: 50%;
+}
+
+.imgg {
+  height: 50rem;
 }
 
 .blog--margin {
@@ -855,4 +892,158 @@ ion-icon {
 
 .italic {
   font-style: italic;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-image {
+  height: 25rem;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.nav-li {
+  font-size: 1.3rem;
+  opacity: 43%;
+}
+
+.cart-product {
+  display: flex;
+  gap: 4rem;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 50% 47% 10%;
+}
+
+.cart-quantity {
+  height: 6rem;
+}
+
+.cart--link {
+  color: #000;
+}
+
+.subtotal {
+  margin-left: 80%;
+}
+
+.cart--btn {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000055;
+  z-index: 10;
+}
+
+.shopping-cart {
+  width: 60%;
+  height: 90%;
+  margin: 2rem auto;
+  background-color: #eee;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.shopping-cart .header {
+  display: flex;
+  background-color: #ccc;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+}
+
+.close-btn {
+  color: #065a82;
+  border-radius: 50%;
+  background-color: #3ac1ff;
+  border: none;
+  padding: 1rem;
+  height: 4rem;
+}
+
+.empty-text {
+  display: flex;
+  padding: 2rem;
+  margin: auto;
+}
+
+.cart--product {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.cart_product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border: 3px solid #eee;
+  background-color: #fff;
+  width: 100%;
+}
+
+.product-info {
+  flex-basis: 50%;
+}
+
+.product_img {
+  width: 100px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+.product-header {
+  font-size: 2rem;
+}
+
+.cart_product select {
+  width: 7rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.remove-btn {
+  color: #4a4a4af6;
+  margin-right: 2rem;
+}
+
+.checkout-btn {
+  background-color: #00000055;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  align-self: center;
+  margin: 2rem 0.5rem;
+}
+
+.checkout-btn:hover {
+  transform: scale(1);
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 20%;
 }

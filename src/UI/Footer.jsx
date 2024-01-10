@@ -38,7 +38,7 @@ function Footer() {
                 type="email"
                 placeholder="Email"
                 required
-                className="input-contact-2"
+                className="footer-form"
               />
               <button className="input-btn">&rarr;</button>
             </form>

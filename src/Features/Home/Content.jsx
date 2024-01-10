@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-// import f25 from "../../Images/f25.jpeg";
 import f25 from "../../Images/f20.jpeg";
 import f27 from "../../Images/f26.jpeg";
-// import f27 from "../../Images/f23.jpeg";
 function Content() {
   return (
     <div>

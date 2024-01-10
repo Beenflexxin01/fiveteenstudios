@@ -4,7 +4,8 @@ import { HiOutlineChevronDown } from "react-icons/hi2";
 import ProductList from "./ProductList";
 
 function Products() {
-  const [products, setProducts] = useState([]);
+  const [product, setProducts] = useState([]);
+
   useEffect(function () {
     async function getProductList() {
       try {
@@ -64,11 +65,10 @@ function Products() {
           </ul>
         </div>
         <div className="grid-4">
-          {products &&
-            products.map(function (product) {
+          {product &&
+            product.map(function (product) {
               return <ProductList key={product._id} product={product} />;
             })}
-        
         </div>
       </div>
     </>

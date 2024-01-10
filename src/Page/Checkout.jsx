@@ -8,13 +8,11 @@ import amex from "../Images/amex.png";
 import master from "../Images/master.png";
 import paypal from "../Images/paypal.png";
 import visa from "../Images/visa.jfif";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 function Checkout() {
-  const { register, handleSubmit, reset, getValues, formState } = useForm({});
-
-  function onSubmit(e) {
-    e.preventDefault();
-  }
+  // function onSubmit(e) {
+  //   e.preventDefault();
+  // }
   return (
     <>
       <div className="others checkout">
@@ -393,7 +391,7 @@ function Checkout() {
               All transre secure and encrypted.
             </p>
           </div>
-          
+
           <form method="POST">
             <div className="form-payment">
               <ul className="form-ul">
@@ -472,10 +470,10 @@ function Checkout() {
             <button className="btn btn-payment ">Pay Now</button>
           </form>
         </div>
-      </div>
 
-      <div className="grid-2-cols checkout-grid checkout_2">
-        <div className="login"></div>
+        <div className="grid-2-cols checkout-grid checkout_2">
+          <div className="login"></div>
+        </div>
       </div>
     </>
   );

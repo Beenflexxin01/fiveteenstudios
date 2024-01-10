@@ -1,9 +1,9 @@
-import Checkout from "./Checkout";
-
 function Story() {
   return (
-    <div>
-      <Checkout />
+    <div className="login">
+      <h1 className="secondary-header h1">
+        PAGE STILL UNDER CONSTRUCTION! <br /> KINDLY CHECK BACK LATER 😎.
+      </h1>
     </div>
   );
 }

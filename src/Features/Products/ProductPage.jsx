@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../UI/Footer";
 import Loader from "../../UI/Loader";
-import f41 from "../../Images/f41.jpeg";
-import f42 from "../../Images/f42.jpeg";
-import f43 from "../../Images/f43.jpeg";
-import f52 from "../../Images/f52.jpeg";
+
+import OtherProducts from "../../Ui/OtherProducts";
+
+import CartFunction from "../../UI/CartFunction";
 
 function ProductPage() {
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
+
   const { id } = useParams();
   const {
     title,
@@ -18,24 +19,17 @@ function ProductPage() {
     price,
     oldPrice,
     image,
-    hiddenImage,
-    imageCover,
     description,
     size,
     sale,
     paymentOption,
     shipPrice,
     quantity,
-    qtnNum,
-    qtnBtn,
-    qtnBtnAdd,
     color,
-    cart,
-    buy,
-    btnPay,
-    btnPal,
     soldOut,
   } = product;
+
+ 
   useEffect(
     function () {
       async function getProductDetails() {
@@ -62,6 +56,7 @@ function ProductPage() {
 
   return (
     <>
+     
       <div className="grid-2 product--grid">
         {isLoading ? (
           <Loader />
@@ -104,19 +99,10 @@ function ProductPage() {
               </div>
 
               <p className="text-descriptions">{quantity}</p>
-              <div className="quantity product-size">
-                <button className="quantity-btn ">{qtnBtn}</button>
-                <p className="text-description">{qtnNum}</p>
-                <button className="quantity-btn ">{qtnBtnAdd}</button>
-              </div>
-              <div className="btn-div">
-                <button className="btn btn-cart">{cart}</button>
-                <button className="paypal btn-pay">
-                  <span className="buy"> {buy}</span>{" "}
-                  <span className="span">{btnPay}</span>
-                  <span className="span-pal">{btnPal}</span>
-                </button>
-              </div>
+
+              <CartFunction product={product} />
+
+              {/* <Button addProductToCart={addProductToCart} product={product} /> */}
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}
@@ -126,62 +112,7 @@ function ProductPage() {
           </>
         )}
       </div>
-      <div className="container">
-        <h2 className="secondary-header">You may also like</h2>
-        <div className="grid-4">
-          <div className="grid-4-cols">
-            <Link to="" className="nav-link">
-              <img src={f41} alt="" className="grid-4-image" />
-
-              <div className="text-align">
-                <p className="text-description">
-                  <strong>XV SWEATPANTS</strong>
-                </p>
-                <p className="text-description">$48.00USD</p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="grid-4-cols">
-            <Link to="" className="nav-link">
-              <img src={f42} alt="" className="grid-4-image" />
-
-              <div className="text-align">
-                <p className="text-description">
-                  <strong>XVarsity</strong>
-                </p>
-                <p className="text-description">$80.00USD</p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="grid-4-cols">
-            <Link to="" className="nav-link">
-              <img src={f43} alt="" className="grid-4-image" />
-
-              <div className="text-align">
-                <p className="text-description">
-                  <strong>XV PALMS</strong>
-                </p>
-                <p className="text-description">$30.00USD</p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="grid-4-cols">
-            <Link to="" className="nav-link">
-              <img src={f52} alt="" className="grid-4-image" />
-
-              <div className="text-align">
-                <p className="text-description ">
-                  <strong>FVT CLASSIC</strong>
-                </p>
-                <p className="text-description">$28.00USD</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <OtherProducts />
       <Footer />
     </>
   );

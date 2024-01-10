@@ -3,8 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/OtherProducts";
+import Button from "../../../UI/Button";
+import CartFunction from "../../../UI/CartFunction";
 function FeatureProductDetails() {
-  const [featureProducts, setFeatureProductData] = useState({});
+  const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
 
@@ -20,16 +22,10 @@ function FeatureProductDetails() {
     paymentOption,
     shipPrice,
     quantity,
-    qtnNum,
-    qtnBtn,
-    qtnBtnAdd,
     color,
-    cart,
-    buy,
-    btnPay,
-    btnPal,
     soldOut,
-  } = featureProducts;
+    imageCover,
+  } = product;
 
   useEffect(
     function () {
@@ -43,7 +39,7 @@ function FeatureProductDetails() {
           const data = await res.json();
 
           if (data.Response === "False") throw new Error("Blogs not found");
-          setFeatureProductData(data);
+          setProductData(data);
 
           setIsLoading(false);
         } catch (err) {
@@ -68,7 +64,7 @@ function FeatureProductDetails() {
               </div>
 
               <div className="img-grid">
-                {/* <img src={`${imageCover}`} alt={title} /> */}
+                {/* <img src={`${imageCover[2]}`} alt={title} /> */}
               </div>
             </div>
             <div className="grid-2-cols checkout-grid product-grid">
@@ -99,19 +95,7 @@ function FeatureProductDetails() {
               </div>
 
               <p className="text-descriptions">{quantity}</p>
-              <div className="quantity product-size">
-                <button className="quantity-btn ">{qtnBtn}</button>
-                <p className="text-description">{qtnNum}</p>
-                <button className="quantity-btn ">{qtnBtnAdd}</button>
-              </div>
-              <div className="btn-div">
-                <button className="btn btn-cart">{cart}</button>
-                <button className="paypal btn-pay">
-                  <span className="buy"> {buy}</span>{" "}
-                  <span className="span">{btnPay}</span>
-                  <span className="span-pal">{btnPal}</span>
-                </button>
-              </div>
+              <CartFunction product={product} />
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}

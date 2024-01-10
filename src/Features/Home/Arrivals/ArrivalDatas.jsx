@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
-
 import OtherProducts from "../../../UI/OtherProducts";
+
+import CartFunction from "../../../UI/CartFunction";
 function ArrivalDatas() {
-  const [arrivals, setArrivalsData] = useState({});
+  const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
 
@@ -21,22 +22,15 @@ function ArrivalDatas() {
     paymentOption,
     shipPrice,
     quantity,
-    qtnNum,
-    qtnBtn,
-    qtnBtnAdd,
     color,
-    cart,
-    buy,
-    btnPay,
-    btnPal,
     soldOut,
-  } = arrivals;
+  } = product;
 
   useEffect(
     function () {
       async function getArrivalDetails() {
         try {
-          const res = await fetch(`http://localhost:5000/api/arrivals/${id}`);
+          const res = await fetch(`http://localhost:5000/api/product/${id}`);
           if (!res.ok)
             throw new Error(
               "Something went wrong while loading the blogs from the database."
@@ -44,7 +38,7 @@ function ArrivalDatas() {
           const data = await res.json();
 
           if (data.Response === "False") throw new Error("Blogs not found");
-          setArrivalsData(data);
+          setProductData(data);
 
           setIsLoading(false);
         } catch (err) {
@@ -100,19 +94,8 @@ function ArrivalDatas() {
               </div>
 
               <p className="text-descriptions">{quantity}</p>
-              <div className="quantity product-size">
-                <button className="quantity-btn ">{qtnBtn}</button>
-                <p className="text-description">{qtnNum}</p>
-                <button className="quantity-btn ">{qtnBtnAdd}</button>
-              </div>
-              <div className="btn-div">
-                <button className="btn btn-cart">{cart}</button>
-                <button className="paypal btn-pay">
-                  <span className="buy"> {buy}</span>{" "}
-                  <span className="span">{btnPay}</span>
-                  <span className="span-pal">{btnPal}</span>
-                </button>
-              </div>
+              {/* <Button /> */}
+              <CartFunction product={product} />
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}
