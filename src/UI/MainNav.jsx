@@ -33,6 +33,11 @@ function MainNav() {
       return [...oldState];
     });
   };
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((open) => !open);
+  };
 
   useEffect(
     function () {
@@ -54,52 +59,54 @@ function MainNav() {
       </div>
       <nav className="main-nav">
         <ul className="main-nav-ul">
-          <div className="div-nav">
+          <li className="trigger" onClick={toggleMenu}>
+            trigger
+          </li>
+          <div className={`div-nav ${isOpen ? `is-open` : ""}`}>
             <li className="main-nav-li">
-              <NavLink to="/" className="main-nav-link">
+              <NavLink to="/" className="main-nav-link main-nav--link">
                 <span>HOME</span>
               </NavLink>
             </li>
 
             <li className="main-nav-li">
-              <NavLink to="/products" className="main-nav-link">
+              <NavLink to="/products" className="main-nav-link main-nav--link">
                 <span>PRODUCTS</span>
               </NavLink>
             </li>
 
             <li className="main-nav-li">
-              <NavLink to="/story" className="main-nav-link">
+              <NavLink to="/story" className="main-nav-link main-nav--link">
                 <span>STORY</span>
               </NavLink>
             </li>
 
             <li className="main-nav-li">
-              <NavLink to="/blog" className="main-nav-link">
+              <NavLink to="/blog" className="main-nav-link main-nav--link">
                 <span>JOURNAL</span>
               </NavLink>
             </li>
 
             <li className="main-nav-li">
-              <NavLink to="/contact" className="main-nav-link">
+              <NavLink to="/contact" className="main-nav-link main-nav--link">
                 <span>CONTACT</span>
               </NavLink>
             </li>
-            <button class="btn-mobile-nav">
+
+            <button class="btn-mobile-nav" onClick={toggleMenu}>
               <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
               <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
             </button>
-            {/* </ul> */}
           </div>
-          {/* <ul className="main-nav-ul"> */}
           <li className="main-nav-li">
-            <NavLink to="/" className="main-nav-link">
+            <NavLink to="/" className="main-nav-link ">
               <img src={logo} alt="fiveteen Logo" className="logo" />
             </NavLink>
           </li>
 
           <div className="others">
             <li className="main-nav-li">
-              <NavLink to="/search" className="main-nav-link">
+              <NavLink to="/search" className="main-nav-link ">
                 <span>
                   <HiMagnifyingGlass className="icons" />
                 </span>

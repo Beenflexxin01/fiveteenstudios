@@ -3,7 +3,6 @@ import Footer from "../UI/Footer";
 import OtherProducts from "../UI/ProductCollections";
 import Loader from "../UI/Loader";
 import { useEffect, useState } from "react";
-import Button from "../UI/Button";
 import CartFunction from "../UI/CartFunction";
 
 function ProductDetails() {

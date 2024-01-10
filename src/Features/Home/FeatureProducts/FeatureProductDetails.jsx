@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
-import OtherProducts from "../../../UI/OtherProducts";
-import Button from "../../../UI/Button";
+import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
 function FeatureProductDetails() {
   const [product, setProductData] = useState({});

@@ -1,7 +1,7 @@
 import { HiOutlineChevronDown } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import NewArrivals from "../UI/NewArrivals";
+import NewArrivals from "../Features/Home/Arrivals/ArrivalProducts";
 
 function Products() {
   const [arrivals, setArrivals] = useState([]);
