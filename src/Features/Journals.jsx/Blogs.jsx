@@ -174,20 +174,23 @@ function Blogs() {
             <h2 className="secondary-header blog--margin">Leave a comment</h2>
             <form action="">
               <ul className="form-ul">
-                <li className="form-li form-checkout">
+                <li className="form-block">
                   <input
                     type="text"
-                    placeholder="Name*"
+                    name="name"
+                    placeholder="Name"
                     required
-                    className="input-contact input-payment"
+                    className="input-contact-2 input-payment"
                   />
                   <input
                     type="email"
-                    placeholder="Email*"
+                    name="email"
+                    placeholder="Email"
                     required
-                    className="input-contact input-payment"
+                    className="input-contact-2 input-email input-payment"
                   />
                 </li>
+
                 <li className="form-li">
                   <textarea
                     name="comment"

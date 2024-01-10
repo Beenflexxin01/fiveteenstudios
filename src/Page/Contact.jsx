@@ -22,7 +22,7 @@ function Contact() {
                   name="email"
                   placeholder="Email"
                   required
-                  className="input-contact-2"
+                  className="input-contact-2 input-email"
                 />
               </li>
 

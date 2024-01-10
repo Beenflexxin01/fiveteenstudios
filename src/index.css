@@ -543,7 +543,7 @@ ion-icon {
   margin-top: 7rem;
 }
 
-.checkout-grid-scroll {
+/* .checkout-grid-scroll {
   border: 0.2px solid #e0e0e0;
   overflow-y: scroll;
   height: 100vh;
@@ -551,11 +551,11 @@ ion-icon {
 
 .checkout-grid-scroll::-webkit-scrollbar {
   width: 1rem;
-}
+} */
 
 .checkout-grid {
   padding: 7rem;
-  background-color: #e5e3e30b;
+  background-color: #e5e3e35e;
 }
 
 .checkout-grid:hover {
@@ -582,6 +582,7 @@ ion-icon {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-left: auto;
 }
 
 .credit-card-img {
