@@ -1,6 +1,6 @@
 import { HiShoppingBag } from "react-icons/hi2";
 import logo from "../Images/logo2.jfif";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import discover from "../Images/discover.jfif";
 import apple from "../Images/applepay.png";

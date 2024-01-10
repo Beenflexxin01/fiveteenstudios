@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
-import OtherProducts from "../../../UI/OtherProducts";
+import OtherProducts from "../../../UI/ProductCollections";
 
 import CartFunction from "../../../UI/CartFunction";
 function ArrivalDatas() {
@@ -30,7 +30,7 @@ function ArrivalDatas() {
     function () {
       async function getArrivalDetails() {
         try {
-          const res = await fetch(`http://localhost:5000/api/product/${id}`);
+          const res = await fetch(`http://localhost:5000/api/arrivals/${id}`);
           if (!res.ok)
             throw new Error(
               "Something went wrong while loading the blogs from the database."

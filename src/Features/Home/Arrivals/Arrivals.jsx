@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player";
 
 import { useEffect, useRef, useState } from "react";
-import NewArrivals from "../../../UI/NewArrivals";
+import NewArrivals from "./ArrivalProducts";
 const VIDEO_PATH = "https://www.youtube.com/watch?v=o-Mgx_XLqYM&themeRefresh=1";
 
 function Arrivals() {

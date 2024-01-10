@@ -3,11 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 
-import OtherProducts from "../../../Ui/OtherProducts";
+import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
 
 function AllfeatureProductDetails() {
-  // const [allFeatureProducts, setAllFeatureProductData] = useState({});
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
@@ -25,7 +24,7 @@ function AllfeatureProductDetails() {
     shipPrice,
     quantity,
     color,
-    imageCover,
+    // imageCover,
     soldOut,
   } = product;
 
@@ -67,8 +66,8 @@ function AllfeatureProductDetails() {
                 <img src={image} alt={title} className="product-image" />
               </div>
 
-                <div className="img-grid">
-                  {/* {product.map(img => {
+              <div className="img-grid">
+                {/* {product.map(img => {
                     <img ={img} alt={title} />
                   })} */}
                 {/* <img src={`${imageCover[3]}`} alt={title} /> */}

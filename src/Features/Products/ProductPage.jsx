@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "../../UI/Footer";
 import Loader from "../../UI/Loader";
 
-import OtherProducts from "../../Ui/OtherProducts";
+import OtherProducts from "../../UI/ProductCollections";
 
 import CartFunction from "../../UI/CartFunction";
 
@@ -29,7 +29,6 @@ function ProductPage() {
     soldOut,
   } = product;
 
- 
   useEffect(
     function () {
       async function getProductDetails() {
@@ -56,7 +55,6 @@ function ProductPage() {
 
   return (
     <>
-     
       <div className="grid-2 product--grid">
         {isLoading ? (
           <Loader />

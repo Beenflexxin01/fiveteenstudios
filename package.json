@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
-  "main": "./src/App",
+  "main": "./App",
   "proxy": "http://localhost:5173",
   "scripts": {
     "dev": "vite",

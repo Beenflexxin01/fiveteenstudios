@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import Footer from "../UI/Footer";
-import OtherProducts from "../Ui/OtherProducts";
+import OtherProducts from "../UI/ProductCollections";
 import Loader from "../UI/Loader";
 import { useEffect, useState } from "react";
 import Button from "../UI/Button";

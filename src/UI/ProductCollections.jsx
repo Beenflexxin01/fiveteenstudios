@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import NewArrivals from "./NewArrivals";
+import NewArrivals from "../Features/Home/Arrivals/ArrivalProducts";
 
 function OtherProducts() {
   const [arrivals, setArrivals] = useState([]);
@@ -24,7 +24,7 @@ function OtherProducts() {
   return (
     <>
       <div className="container">
-        <h2 className="secondary-header">You may also  like</h2>
+        <h2 className="secondary-header">You may also like</h2>
 
         <div className="grid-4">
           {arrivals &&
