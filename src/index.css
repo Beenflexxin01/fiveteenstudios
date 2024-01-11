@@ -21,43 +21,6 @@ li {
   list-style: none;
 }
 
-.trigger {
-  display: none;
-  cursor: pointer;
-}
-
-.btn-mobile-nav {
-  border: none;
-  background-color: transparent;
-  background-color: red;
-  cursor: pointer;
-  display: none;
-}
-
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #eee;
-}
-
-on-icon{
-  border: none;
-  background-color: transparent;
-  background-color: red;
-  cursor: pointer;
-  display: none;
-}
-
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #eee;
-}
-
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
-} 
-
 .container {
   margin: 5rem;
   padding: 3rem;
@@ -87,7 +50,6 @@ on-icon{
   position: sticky;
   top: 0;
   z-index: 1;
- 
 }
 
 .logo {
@@ -102,7 +64,8 @@ on-icon{
 }
 
 .main-nav-ul,
-.div-nav {
+.burger-menu,
+.nav-bar {
   display: flex;
   align-items: center;
 }
@@ -192,10 +155,6 @@ on-icon{
 .text-description {
   font-size: 1.7rem;
 }
-
-/* .blog-description {
-  font-size: 1.7rem;
-} */
 
 .blog-descriptions {
   font-size: 1rem;

@@ -23,7 +23,7 @@ function FeatureProductDetails() {
     quantity,
     color,
     soldOut,
-    imageCover,
+    // imageCover,
   } = product;
 
   useEffect(
