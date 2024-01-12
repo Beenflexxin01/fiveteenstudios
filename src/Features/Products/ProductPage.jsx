@@ -7,6 +7,7 @@ import Loader from "../../UI/Loader";
 import OtherProducts from "../../UI/ProductCollections";
 
 import CartFunction from "../../UI/CartFunction";
+import CartItem from "../Cart/CartItem";
 
 function ProductPage() {
   const [product, setProductData] = useState({});
@@ -99,7 +100,7 @@ function ProductPage() {
               <p className="text-descriptions">{quantity}</p>
 
               <CartFunction product={product} />
-
+              {/* <CartItem /> */}
               {/* <Button addProductToCart={addProductToCart} product={product} /> */}
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">

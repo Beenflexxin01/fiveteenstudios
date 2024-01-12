@@ -63,6 +63,20 @@ function FeatureProductDetails() {
               </div>
 
               <div className="img-grid">
+                {/* import React from 'react';
+
+import bulkImages from './bulkImages';
+
+export default function YourComponent() {
+  return (
+    <div className="bulkImageArea">
+      {bulkImages.map((img) => (
+        <img key={img} src={img} alt={img} className="bulkImage" />
+      ))}
+    </div>
+  );
+} */}
+
                 {/* <img src={`${imageCover[2]}`} alt={title} /> */}
               </div>
             </div>

@@ -16,6 +16,7 @@ function FeatureProductsData({ features }) {
               <strong>{features.title}</strong>
             </p>
             <p className="text-description">{features.price}</p>
+            <img src={features.imageCover} alt="" />
           </div>
         </div>
       </div>

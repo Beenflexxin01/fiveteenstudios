@@ -52,6 +52,10 @@
   select {
     padding: 1.7rem;
   }
+
+  .sort {
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 75em) {
@@ -304,14 +308,24 @@
     font-size: 1.3rem;
   }
 
-  .cart_product {
-    display: block;
+  .shopping-cart {
+    margin: 2rem auto;
+    width: 80%;
   }
+
+  /* .cart_product {
+    display: block;
+  } */
 }
 
 @media (max-width: 35rem) {
   body {
     background-color: rgb(250, 246, 246);
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   .logo {
@@ -416,7 +430,10 @@
     text-align: start;
   }
 
-  .shopping-cart {
-    margin: 2rem 0;
+  
+  .filters {
+    display: none;
   }
+  
+ 
 }

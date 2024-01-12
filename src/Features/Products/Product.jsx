@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { HiOutlineChevronDown } from "react-icons/hi2";
 import ProductList from "./ProductList";
+import FilterOperation from "./OperationFilter";
+import OperationSort from "./OperationSort";
 
 function Products() {
   const [product, setProducts] = useState([]);
@@ -29,40 +29,14 @@ function Products() {
       <div className="container">
         <h1 className="primary-header h1">Products</h1>
         <div className="filters">
-          <ul className="filter-ul">
-            <div className="filter">
-              <li className="filter-li">Filter:</li>
-              <li className="filter-li">
-                <Link to="" className="link">
-                  <span>Availablity</span>
-                  <HiOutlineChevronDown />
-                </Link>
-              </li>
-              <li className="filter-li">
-                <Link to="" className="link">
-                  <span>Price</span>
-                  <HiOutlineChevronDown />
-                </Link>
-              </li>
-            </div>
-            <div className="sort">
-              <li className="filter-li">Sort By:</li>
-
-              <li className="filter-li">
-                <Link to="" className="link">
-                  <span>Alphabetically, A - Z</span>
-                  <HiOutlineChevronDown />
-                </Link>
-              </li>
-
-              <li className="filter-li">
-                <Link to="" className="link">
-                  <span>Price</span>
-                  <HiOutlineChevronDown />
-                </Link>
-              </li>
-            </div>
-          </ul>
+          <div className="filter">
+            <p className="filter-li">Filter:</p>
+            <FilterOperation />
+          </div>
+          <div className="sort">
+            <p className="filter-li">Sort By:</p>
+            <OperationSort />
+          </div>
         </div>
         <div className="grid-4">
           {product &&

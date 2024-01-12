@@ -8,20 +8,29 @@ function ShoppingNavFn() {
   );
   const [cartVisibility, setCartVisibility] = useState(false);
 
+  const getTotalItems = () => {
+    let cart = JSON.parse(localStorage.getItem("shopping-cart")) || [];
+    if (cart) {
+      let total = 0;
+      cart.forEach((item) => {
+        return (total += item.quantity);
+      });
+    }
+  };
+
   const onQuantityChange = (productid, count) => {
     setProductCart((oldState) => {
       const productIndex = oldState.findIndex((item) => item.id === productid);
-      if (productIndex !== -1) {
+      if (productIndex !== 1) {
         oldState[productIndex].count = count;
       }
       return [...oldState];
     });
   };
-
   const onProductRemove = (product) => {
     setProductCart((oldState) => {
       const productIndex = oldState.findIndex((item) => item.id === product.id);
-      if (productIndex !== -1) {
+      if (productIndex !== 1) {
         oldState.splice(productIndex, 1);
       }
       return [...oldState];
@@ -34,6 +43,7 @@ function ShoppingNavFn() {
     },
     [productInCart]
   );
+
   return (
     <div>
       <ShoppingCart

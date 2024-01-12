@@ -60,6 +60,9 @@ li {
 }
 
 .shop-btn {
+  background-color: #eeeeee;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -358,26 +361,31 @@ ion-icon {
   font-size: 5.5rem;
 }
 
-.filter {
+.filters {
   display: flex;
-  gap: 4rem;
-  margin-left: -4rem;
+  align-items: center;
 }
 
-.filter-ul {
+.filter {
   display: flex;
+  gap: 3rem;
   align-items: center;
 }
 
 .filter-li {
   font-size: 1.8rem;
-  text-decoration: none;
 }
 
 .sort {
   display: flex;
-  gap: 4rem;
-  margin-left: auto;
+  gap: 2rem;
+  margin-left: 76rem;
+  align-items: center;
+}
+
+.select {
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .journal-img {
@@ -521,19 +529,9 @@ ion-icon {
   margin-top: 7rem;
 }
 
-/* .checkout-grid-scroll {
-  border: 0.2px solid #e0e0e0;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-.checkout-grid-scroll::-webkit-scrollbar {
-  width: 1rem;
-} */
-
 .checkout-grid {
   padding: 7rem;
-  background-color: #e5e3e35e;
+  background-color: #e5e3e31d;
 }
 
 .checkout-grid:hover {
@@ -816,17 +814,18 @@ ion-icon {
 }
 
 .quantity {
-  border: 1px solid #6b6a6a;
-  width: 15rem;
-  opacity: 85%;
-  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .quantity-btn {
-  border: none;
+  border: 1px solid #555;
   background-color: transparent;
-  font-size: 3rem;
-  outline: none;
+  font-size: 2.4rem;
+  opacity: 65%;
+  border-radius: 9rem;
+  padding: 0 1rem;
 }
 
 .btn-div {
@@ -984,7 +983,7 @@ ion-icon {
 }
 
 .product-info {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .product_img {
@@ -996,6 +995,10 @@ ion-icon {
 
 .product-header {
   font-size: 2rem;
+}
+
+.product-price {
+  font-size: 1.6rem;
 }
 
 .cart_product select {
@@ -1010,11 +1013,11 @@ ion-icon {
 }
 
 .checkout-btn {
-  background-color: #00000055;
-  padding: 1rem;
-  font-size: 1rem;
+  background-color: #008000;
+  padding: 1.2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
   border: none;
-  align-self: center;
   margin: 2rem 0.5rem;
 }
 
@@ -1025,4 +1028,17 @@ ion-icon {
 .empty-cart {
   text-align: center;
   margin-top: 20%;
+}
+
+.form-control {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.sub-total {
+  font-size: 1.8rem;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }

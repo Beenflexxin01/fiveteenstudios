@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { HiOutlineChevronDown } from "react-icons/hi2";
-import { NavLink } from "react-router-dom";
 import AllFeatureProductData from "./AllFeatureProductData";
+import FilterOperation from "../../Products/OperationFilter";
+import OperationSort from "../../Products/OperationSort";
 import Footer from "../../../UI/Footer";
 
 function AllFeatureProducts() {
@@ -35,36 +35,16 @@ function AllFeatureProducts() {
       <div className="container">
         <h2 className="secondary-header ">FEATURED PRODUCTS</h2>
         <div className="filters">
-          <ul className="filter-ul">
             <div className="filter">
               <li className="filter-li">Filter:</li>
-              <li className="filter-li">
-                <NavLink to="" className="link">
-                  <span>Availablity</span>
-                  <HiOutlineChevronDown />
-                </NavLink>
-              </li>
-              <li className="filter-li">
-                <NavLink to="" className="link">
-                  <span>Price</span>
-                  <HiOutlineChevronDown />
-                </NavLink>
-              </li>
+              <FilterOperation />
             </div>
             <div className="sort">
-              <li className="filter-li">Sort By:</li>
-
-              <li className="filter-li">
-                <NavLink to="" className="link">
-                  <span>Alphabetically, A - Z</span>
-                  <HiOutlineChevronDown />
-                </NavLink>
-              </li>
-
-              <li className="filter-li">X products</li>
+              <div className="filter-li">Sort By:</div>
+              <OperationSort />
             </div>
-          </ul>
         </div>
+
         <div className="grid-4">
           {allFeatures &&
             allFeatures.map((allfeatures) => {
@@ -77,7 +57,7 @@ function AllFeatureProducts() {
             })}
         </div>
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 }

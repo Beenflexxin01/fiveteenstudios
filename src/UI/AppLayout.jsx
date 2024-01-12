@@ -6,7 +6,7 @@ function AppLayout() {
   return (
     <div>
       <Header />
-      <MainNav />
+      <MainNav reloader={false} />
       <div>
         <main>
           <Outlet />

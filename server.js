@@ -20,8 +20,6 @@ app.use(
   })
 );
 
-// app.use(express.static(path.join(__dirname, "main")));
-
 process.on("UncaughtException", (err) => {
   console.log(err.message);
   console.log("UNCAUGHT EXCEPTION... SHUTTING DOWN NOW......");
@@ -179,16 +177,6 @@ app.get("/api/summer/:id", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
-// app.get("/api/button", async (req, res) => {
-//   try {
-//     const button = await Button.find();
-//     res.json(button);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send("Server Error");
-//   }
-// });
 
 process.on("SIGTERM", function () {
   console.log("🤗 SIGTERM RECEIVED, Shutting down gracefully");
