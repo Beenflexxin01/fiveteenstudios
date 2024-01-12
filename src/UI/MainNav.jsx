@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import OtherNavs from "./OtherNavs";
-import Burger from "./Burger";
 // import Burger from "./Burger";
 
 function NavBar({ reloadNavBar }) {

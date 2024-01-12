@@ -1,6 +1,6 @@
 import { HiTrash, HiXMark } from "react-icons/hi2";
 import { Link, useNavigate } from "react-router-dom";
-import QtyComponent from "../../UI/QtyComponent";
+// import QtyComponent from "../../UI/QtyComponent";
 import { useState } from "react";
 
 function ShoppingCart({

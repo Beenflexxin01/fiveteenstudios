@@ -8,15 +8,15 @@ function ShoppingNavFn() {
   );
   const [cartVisibility, setCartVisibility] = useState(false);
 
-  const getTotalItems = () => {
-    let cart = JSON.parse(localStorage.getItem("shopping-cart")) || [];
-    if (cart) {
-      let total = 0;
-      cart.forEach((item) => {
-        return (total += item.quantity);
-      });
-    }
-  };
+  // const getTotalItems = () => {
+  //   let cart = JSON.parse(localStorage.getItem("shopping-cart")) || [];
+  //   if (cart) {
+  //     let total = 0;
+  //     cart.forEach((item) => {
+  //       return (total += item.quantity);
+  //     });
+  //   }
+  // };
 
   const onQuantityChange = (productid, count) => {
     setProductCart((oldState) => {
