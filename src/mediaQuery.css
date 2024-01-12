@@ -375,7 +375,7 @@
   }
 
   .content-texts {
-    top: 25%;
+    top: 30%;
     left: 25%;
     line-height: 1;
   }
@@ -429,10 +429,7 @@
     text-align: start;
   }
 
-  
   .filters {
     display: none;
   }
-  
- 
 }
