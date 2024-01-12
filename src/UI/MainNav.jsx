@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import OtherNavs from "./OtherNavs";
-// import Burger from "./Burger";
 
-function NavBar({ reloadNavBar }) {
+function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
