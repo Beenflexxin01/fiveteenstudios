@@ -22,23 +22,40 @@ import FeatureProductDetails from "./Features/Home/FeatureProducts/FeatureProduc
 import AllfeatureProductDetails from "./Features/Home/FeatureProducts/AllfeatureProductDetails";
 import SummerDetails from "./Page/SummerDetails";
 import Checkout from "./Page/Checkout";
-
-// const querryClient = new QueryClient({
-//   defaultOptions: {
-//     queries: {
-//       staleTime: 0,
-//     },
-//   },
-// });
+import { useEffect, useState } from "react";
 
 function App() {
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("shopping-cart")) || []
+  );
+  const [cartValidation, setCartValidation] = useState([]);
+
+  useEffect(
+    function () {
+      localStorage.setItem("shopping-cart", JSON.stringify(cart));
+    },
+    [cart]
+  );
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<AppLayout />}>
+          <Route
+            element={
+              <AppLayout
+                cartCount={cart.length}
+                cart={cart}
+                setCart={setCart}
+              />
+            }>
             <Route index element={<Navigate replace to="home" />} />
-            <Route path="cart" element={<Cart />} />
+            <Route
+              path="cart"
+              element={<Cart />}
+              cart={cart}
+              setCart={setCart}
+            />
             <Route path="contact" element={<Contact />} />
             <Route path="home" element={<Home />} />
             <Route path="blog" element={<Journals />} />
@@ -49,13 +66,60 @@ function App() {
             <Route path="AllFeatureProducts" element={<AllFeatureProducts />} />
             <Route path="account/register" element={<SignUp />} />
             <Route path="account/recover" element={<PasswordReset />} />
-            <Route path="productPage/:id" element={<ProductPage />} />
-            <Route path="arrivalData/:id" element={<ArrivalDatas />} />
-            <Route path="summerDetails/:id" element={<SummerDetails />} />
-            <Route path="featureData/:id" element={<FeatureProductDetails />} />
+            <Route
+              path="productPage/:id"
+              element={
+                <ProductPage
+                  cart={cart}
+                  setCart={setCart}
+                  cartValidation={cartValidation}
+                  setCartValidation={setCartValidation}
+                />
+              }
+            />
+            <Route
+              path="arrivalData/:id"
+              element={
+                <ArrivalDatas
+                  cart={cart}
+                  setCart={setCart}
+                  cartValidation={cartValidation}
+                  setCartValidation={setCartValidation}
+                />
+              }
+            />
+            <Route
+              path="summerDetails/:id"
+              element={
+                <SummerDetails
+                  cart={cart}
+                  setCart={setCart}
+                  cartValidation={cartValidation}
+                  setCartValidation={setCartValidation}
+                />
+              }
+            />
+            <Route
+              path="featureData/:id"
+              element={
+                <FeatureProductDetails
+                  cart={cart}
+                  setCart={setCart}
+                  cartValidation={cartValidation}
+                  setCartValidation={setCartValidation}
+                />
+              }
+            />
             <Route
               path="allfeatureData/:id"
-              element={<AllfeatureProductDetails />}
+              element={
+                <AllfeatureProductDetails
+                  cart={cart}
+                  setCart={setCart}
+                  cartValidation={cartValidation}
+                  setCartValidation={setCartValidation}
+                />
+              }
             />
             <Route path="blogs/designs/:id" element={<Blogs />} />
             <Route path="collections/ss" element={<Summer />} />

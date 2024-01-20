@@ -5,7 +5,7 @@ import Loader from "../UI/Loader";
 import { useEffect, useState } from "react";
 import CartFunction from "../UI/CartFunction";
 
-function ProductDetails() {
+function ProductDetails({ cart, setCart }) {
   const [product, setproductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
@@ -73,7 +73,7 @@ function ProductDetails() {
               <h2 className="secondary-header">{title}</h2>
               <p className="text-description">{description}</p>
               <div className="price-group">
-                <p className="text-description">{price}</p>
+              <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
                   <s>{oldPrice}</s>
                 </p>
@@ -97,7 +97,7 @@ function ProductDetails() {
 
               <p className="text-descriptions">{quantity}</p>
               {/* <Button /> */}
-              <CartFunction product={product} />
+              <CartFunction product={product} cart={cart} setCart={setCart} />
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}

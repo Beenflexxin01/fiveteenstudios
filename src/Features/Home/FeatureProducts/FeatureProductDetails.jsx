@@ -4,7 +4,7 @@ import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
-function FeatureProductDetails() {
+function FeatureProductDetails({cart, setCart}) {
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
@@ -63,21 +63,6 @@ function FeatureProductDetails() {
               </div>
 
               <div className="img-grid">
-                {/* import React from 'react';
-
-import bulkImages from './bulkImages';
-
-export default function YourComponent() {
-  return (
-    <div className="bulkImageArea">
-      {bulkImages.map((img) => (
-        <img key={img} src={img} alt={img} className="bulkImage" />
-      ))}
-    </div>
-  );
-} */}
-
-                {/* <img src={`${imageCover[2]}`} alt={title} /> */}
               </div>
             </div>
             <div className="grid-2-cols checkout-grid product-grid">
@@ -85,7 +70,7 @@ export default function YourComponent() {
               <h2 className="secondary-header">{title}</h2>
               <p className="text-description">{description}</p>
               <div className="price-group">
-                <p className="text-description">{price}</p>
+              <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
                   <s>{oldPrice}</s>
                 </p>
@@ -108,7 +93,7 @@ export default function YourComponent() {
               </div>
 
               <p className="text-descriptions">{quantity}</p>
-              <CartFunction product={product} />
+              <CartFunction product={product} cart={cart} setCart={setCart}/>
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}

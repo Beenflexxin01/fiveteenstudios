@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 import FilterOperation from "./OperationFilter";
 import OperationSort from "./OperationSort";
 
-function Products() {
+function Products({ addProductToCart, products }) {
   const [product, setProducts] = useState([]);
 
   useEffect(function () {
@@ -41,7 +41,14 @@ function Products() {
         <div className="grid-4">
           {product &&
             product.map(function (product) {
-              return <ProductList key={product._id} product={product} />;
+              return (
+                <ProductList
+                  key={product._id}
+                  product={product}
+                  products={products}
+                  addProductToCart={addProductToCart}
+                />
+              );
             })}
         </div>
       </div>

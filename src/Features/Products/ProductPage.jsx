@@ -1,17 +1,16 @@
 // import { useState, useEffect } from "react";
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../UI/Footer";
 import Loader from "../../UI/Loader";
-
 import OtherProducts from "../../UI/ProductCollections";
-
 import CartFunction from "../../UI/CartFunction";
-import CartItem from "../Cart/CartItem";
 
-function ProductPage() {
+function ProductPage({ cart, setCart }) {
   const [product, setProductData] = useState({});
+
   const [isLoading, setIsLoading] = useState();
+  // const [cart, setCart] = useState([]);
 
   const { id } = useParams();
   const {
@@ -54,6 +53,8 @@ function ProductPage() {
     [id]
   );
 
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="grid-2 product--grid">
@@ -62,20 +63,21 @@ function ProductPage() {
         ) : (
           <>
             <div className="grid-2-cols checkout-grid product-grid">
+              <button className="btn-arr" onClick={() => navigate("/products")}>
+                &larr; Back
+              </button>
               <div className="product-img">
                 <img src={image} alt={title} className="product-image" />
               </div>
 
-              <div className="img-grid">
-                {/* <img src={`${imageCover}`} alt={title} /> */}
-              </div>
+              <div className="img-grid"></div>
             </div>
             <div className="grid-2-cols checkout-grid product-grid">
               <p className="text-descriptions">{defaultText}</p>
               <h2 className="secondary-header">{title}</h2>
               <p className="text-description">{description}</p>
               <div className="price-group">
-                <p className="text-description">{price}</p>
+                <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
                   <s>{oldPrice}</s>
                 </p>
@@ -99,9 +101,8 @@ function ProductPage() {
 
               <p className="text-descriptions">{quantity}</p>
 
-              <CartFunction product={product} />
-              {/* <CartItem /> */}
-              {/* <Button addProductToCart={addProductToCart} product={product} /> */}
+              <CartFunction product={product} cart={cart} setCart={setCart} />
+
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}

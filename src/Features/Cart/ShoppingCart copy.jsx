@@ -2,15 +2,23 @@ import { HiTrash, HiXMark } from "react-icons/hi2";
 import { Link, useNavigate } from "react-router-dom";
 import QtyComponent from "../../UI/QtyComponent";
 
-function ShoppingCart({ visibility, cart, onClose, onProductRemove, setCart }) {
+function ShoppingCart({
+  visibility,
+  products,
+  onClose,
+  onProductRemove,
+  setProductCart,
+  cart,
+  setCart,
+}) {
   const navigate = useNavigate();
 
-  const totalQuantityInCart = cart.reduce(
+  const totalQuantityInCart = products.reduce(
     (total, item) => total + item.quantity,
     0
   );
 
-  const totalProductPrice = cart.reduce(
+  const totalProductPrice = products.reduce(
     (total, item) => total + item.total_price,
     0
   );
@@ -20,7 +28,7 @@ function ShoppingCart({ visibility, cart, onClose, onProductRemove, setCart }) {
       <div
         className="modal"
         style={{ display: visibility ? "flex" : "none" }}
-        key={cart.title}>
+        key={products.title}>
         <div className="shopping-cart">
           <div className="header">
             <h2>Shopping Cart</h2>
@@ -28,20 +36,20 @@ function ShoppingCart({ visibility, cart, onClose, onProductRemove, setCart }) {
               <HiXMark size={15}></HiXMark>
             </button>
           </div>
-          <div className="cart--product" key={cart}>
-            {cart.length === 0 && (
+          <div className="cart--product" key={products}>
+            {products.length === 0 && (
               <>
                 <div className="empty-cart">
                   <h2 className="secondary-header ">Your cart is empty</h2>
                   <button className="btn checkout-btn">
-                    <Link to="/cart" className="cart-link">
+                    <Link to="/products" className="cart-link">
                       Continue Shopping
                     </Link>
                   </button>
                 </div>
               </>
             )}
-            {cart.map((product) => {
+            {products.map((product) => {
               return (
                 <div className="cart_product ">
                   <img
@@ -51,11 +59,16 @@ function ShoppingCart({ visibility, cart, onClose, onProductRemove, setCart }) {
                   />
                   <div className="product-info">
                     <h3 className="product-header">{product.title}</h3>
-                    <span className="product-price">
-                      ${product.total_price}.00 USD
-                    </span>
+                    <span className="product-price">{product.total_price}</span>
                   </div>
-                  <QtyComponent cart={cart} setCart={setCart} />
+                  <QtyComponent
+                    cart={cart}
+                    setProductCart={setProductCart}
+                    setCart={setCart}
+                    products={products}
+                    product={product}
+                  />
+                
 
                   <button
                     className="btn remove-btn"
@@ -66,13 +79,13 @@ function ShoppingCart({ visibility, cart, onClose, onProductRemove, setCart }) {
               );
             })}
 
-            {cart.length > 0 && (
+            {products.length > 0 && (
               <>
                 <div className="sub-total">
                   Total Items: {totalQuantityInCart} items
                 </div>
                 <div className="sub-total">
-                  Total Price: ${totalProductPrice}.00 USD
+                  Total Price: ${totalProductPrice}
                 </div>
 
                 <button

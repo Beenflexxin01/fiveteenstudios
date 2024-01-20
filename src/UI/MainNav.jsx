@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import OtherNavs from "./OtherNavs";
 
-function NavBar() {
+function NavBar({cartCount, cart, setCart}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,6 +10,14 @@ function NavBar() {
       <nav className="main-nav">
         <ul className="main-nav-ul">
           <div className="nav-bar">
+            <div
+              className={`burger ${isOpen && "open"} `}
+              onClick={() => setIsOpen(!isOpen)}>
+              <div className="burger_bar"></div>
+              <div className="burger_bar bar"></div>
+              <div className="burger_bar bar3"></div>
+            </div>
+            
             <div className={`burger-menu ${isOpen && "open"}`}>
               <li className="burger_class">
                 <NavLink to="/" className="main-nav-link main-nav--link">
@@ -43,15 +51,8 @@ function NavBar() {
                 </NavLink>
               </li>
             </div>
-            <div
-              className={`burger ${isOpen && "open"} `}
-              onClick={() => setIsOpen(!isOpen)}>
-              <div className="burger_bar"></div>
-              <div className="burger_bar bar"></div>
-              <div className="burger_bar bar3"></div>
-            </div>
           </div>
-          <OtherNavs />
+          <OtherNavs cartCount={cartCount}  cart={cart} setCart={setCart} />
         </ul>
       </nav>
     </>

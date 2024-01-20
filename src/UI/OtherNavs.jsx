@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../Images/logo.avif";
 import { HiMagnifyingGlass, HiOutlineLockOpen } from "react-icons/hi2";
 import ShoppingNavFn from "./ShoppingNavFn";
-function OtherNavs() {
+function OtherNavs({ cartCount, cart, setCart }) {
   return (
     <>
       <li className="burger_class">
@@ -29,7 +29,7 @@ function OtherNavs() {
         </li>
 
         <li className="burger_class">
-          <ShoppingNavFn />
+          <ShoppingNavFn cartCount={cartCount} cart={cart} setCart={setCart} />
         </li>
       </div>
     </>

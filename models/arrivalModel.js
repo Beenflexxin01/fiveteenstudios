@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const arrivalSchema = new mongoose.Schema({
   title: String,
   default: String,
-  price: String,
+  price: Number,
   oldPrice: String,
   image: String,
   hiddenImage: String,

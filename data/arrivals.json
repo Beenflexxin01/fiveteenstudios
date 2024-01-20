@@ -2,7 +2,7 @@
   {
     "title": "COZY SZN",
     "default": "FIVETEEN STUDIOS",
-    "price": "$60.00 USD",
+    "price": 60.00,
     "image": "/src/Images/f22.jpeg",
     "hiddenImage": "/src/Images/f27.jpeg",
     "description": "When the sun begins to shy away, leaves transition into a beautiful array of colors, and the air turns crisp and chilly, it's a sure sign that we're entering the realm of Cozy Szn.",
@@ -22,7 +22,7 @@
   {
     "title": "XVarsity",
     "default": "FIVETEEN STUDIOS",
-    "price": "$80.00 USD",
+    "price": 80.00,
     "image": "/src/Images/f42.jpeg",
     "hiddenImage": "/src/Images/f27.jpeg",
     "description": "Varsity jacket with padded interior. Double welt pockets at hip and interior pocket. Embroidered appliqué and contrast front and back patches. Rib trim. Front snap button closure.",
@@ -42,7 +42,7 @@
   {
     "title": "XV SWEATPANTS",
     "default": "FIVETEEN STUDIOS",
-    "price": "$48.00 USD",
+    "price": 48.00,
     "image": "/src/Images/f41.jpeg",
     "hiddenImage": "/src/Images/f55.jpeg",
     "description": "Lounge fit pants made of cotton finish fabric and stylish front stitching. Adjustable elastic drawstring waistband. Side pockets and back welt pockets.",
@@ -68,7 +68,7 @@
   {
     "title": "SAC A DOS",
     "default": "FIVETEEN STUDIOS",
-    "price": "$64.00 USD",
+    "price": 64.00,
     "image": "/src/Images/f45.jpeg",
     "hiddenImage": "/src/Images/f66.jpeg",
     "description": "Loose fit hoodie sweatshirt made of dense cotton with terrycloth interior. Collar hood and long sleeves. Front pouch pocket, Rib trim, Front zip. Inner removable strap for form and function.",
