@@ -44,7 +44,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <ToastContainer />
         <Routes>
           <Route
