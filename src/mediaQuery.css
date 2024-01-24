@@ -1,7 +1,7 @@
 @media (max-width: 84rem) {
-  body {
+  /* body {
     background-color: red;
-  }
+  } */
 
   .logo {
     margin-left: 10rem;
@@ -59,9 +59,9 @@
 }
 
 @media (max-width: 75em) {
-  body {
+  /* body {
     background-color: green;
-  }
+  } */
 
   .logo {
     margin-left: 4rem;
@@ -190,12 +190,13 @@
     width: 32px;
     transform: rotate(45deg);
   }
+
   .open > .burger_bar::after {
     width: 32px;
     transform: rotate(-45deg);
   }
 
-  .nav-bar > .burger-menu {
+  .burger-menu {
     display: flex;
     background-color: #000000;
     position: absolute;
@@ -204,17 +205,19 @@
     width: 45%;
     height: 100vh;
     align-items: start;
-    transition: all 0.5s linear;
+    transition: all 0.6s linear;
     transform: translate(-100%);
     opacity: 0;
-    pointer-events: none;
-    z-index: -1;
     padding: 5rem 1.5rem;
     flex-direction: column;
     gap: 3rem;
   }
 
-  .nav-bar > .burger-menu.open {
+  .active {
+    border-bottom: none;
+  }
+
+  .burger-menu.open {
     transform: translate(0);
     opacity: 82%;
   }
@@ -228,9 +231,9 @@
 }
 
 @media (max-width: 48em) {
-  body {
+  /* body {
     background-color: yellow;
-  }
+  } */
 
   .others {
     gap: 0;
@@ -293,17 +296,13 @@
     margin: 2rem auto;
     width: 80%;
   }
-
-  /* .cart_product {
-    display: block;
-  } */
 }
 
 @media (max-width: 35rem) {
-  body {
+  /* body {
     background-color: rgb(250, 246, 246);
     overflow-x: hidden;
-  }
+  } */
 
   html {
     overflow-x: hidden;
@@ -412,5 +411,31 @@
 
   .filters {
     display: none;
+  }
+
+  .cart_product {
+    display: block;
+  }
+
+  .product_img {
+    width: 80%;
+    height: 25vh;
+  }
+
+  .shopping-cart {
+    margin: 2rem;
+    width: 80%;
+  }
+
+  .product-header {
+    font-size: 1.5rem;
+  }
+
+  .total,
+  .checkout-btn,
+  .product-info,
+  .quantity,
+  .remove-btn {
+    margin: 1.3rem 2rem;
   }
 }

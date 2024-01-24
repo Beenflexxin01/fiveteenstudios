@@ -26,6 +26,16 @@ li {
   padding: 3rem;
 }
 
+.active {
+  /* background-color: red; */
+  border-bottom: 3px solid #eee;
+}
+
+/* .active:hover,
+.active:active {
+  border-bottom: 1px solid #fff;
+} */
+
 .link:link,
 .link:visited {
   text-decoration: none;
@@ -988,7 +998,7 @@ ion-icon {
 
 .cart--product {
   overflow-y: scroll;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .cart_product {
@@ -1009,7 +1019,7 @@ ion-icon {
 .product_img {
   width: 100px;
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 9px;
 }
 
@@ -1063,10 +1073,48 @@ ion-icon {
   gap: 3rem;
 }
 
-.btn-arr{
+.btn-arr {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
   font-size: 1.8rem;
+}
+
+.Toastify__toast--warning {
+  background: #ffe8bc !important;
+  background: #fdbf4b !important;
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+}
+.Toastify__toast--error {
+  background: #f0696c !important;
+  background: #fca7a9 !important;
+}
+.Toastify__toast--success {
+  background: #58f860 !important;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  color: #10171d;
+  font-size: 0.875rem !important;
+  font-size: 4rem;
+}
+.Toastify__progress-bar {
+  background: #333f48 !important;
+  background: #248609 !important;
+}
+
+.Toastify__toast-icon {
+  height: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  color: green;
+  background: transparent !important;
 }

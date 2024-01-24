@@ -1,6 +1,7 @@
 // import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AppLayout from "./UI/AppLayout";
+
 import Home from "./Page/Home";
 import Products from "./Page/Products";
 import Journals from "./Page/Journals";
@@ -10,9 +11,12 @@ import Story from "./Page/Story";
 import Contact from "./Page/Contact";
 import PageNotFound from "./Page/PageNotFound";
 import Login from "./Page/Login";
-import Cart from "./Features/Cart/Cart";
 import SignUp from "./Page/SignUp";
 import PasswordReset from "./Page/PasswordReset";
+import SummerDetails from "./Page/SummerDetails";
+import Checkout from "./Page/Checkout";
+
+import Cart from "./Features/Cart/Cart";
 import Blogs from "./Features/Journals.jsx/Blogs";
 import ProductPage from "./Features/Products/ProductPage";
 import AllFeatureProducts from "./Features/Home/FeatureProducts/AllFeatureProducts";
@@ -20,14 +24,15 @@ import AllFeatureProducts from "./Features/Home/FeatureProducts/AllFeatureProduc
 import ArrivalDatas from "./Features/Home/Arrivals/ArrivalDatas";
 import FeatureProductDetails from "./Features/Home/FeatureProducts/FeatureProductDetails";
 import AllfeatureProductDetails from "./Features/Home/FeatureProducts/AllfeatureProductDetails";
-import SummerDetails from "./Page/SummerDetails";
-import Checkout from "./Page/Checkout";
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("shopping-cart")) || []
   );
+
   const [cartValidation, setCartValidation] = useState([]);
 
   useEffect(
@@ -40,6 +45,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer />
         <Routes>
           <Route
             element={

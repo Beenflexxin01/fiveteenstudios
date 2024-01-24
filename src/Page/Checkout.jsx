@@ -1,6 +1,6 @@
 import { HiShoppingBag } from "react-icons/hi2";
 import logo from "../Images/logo2.jfif";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import discover from "../Images/discover.jfif";
 import apple from "../Images/applepay.png";
@@ -8,9 +8,8 @@ import amex from "../Images/amex.png";
 import master from "../Images/master.png";
 import paypal from "../Images/paypal.png";
 import visa from "../Images/visa.jfif";
-// import { useForm } from "react-hook-form";
 function Checkout() {
-
+  const navigate = useNavigate();
   return (
     <>
       <div className="others checkout">
@@ -18,9 +17,9 @@ function Checkout() {
           <img src={logo} alt="fiveteen-logo" className="checkout-logo" />
         </Link>
 
-        <Link to="/cart">
+        <button onClick={() => navigate("/shopping-cart")}>
           <HiShoppingBag className="icons checkout-icon" />
-        </Link>
+        </button>
       </div>
 
       <div className=" checkout-grid">

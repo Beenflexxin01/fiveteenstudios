@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../UI/Footer";
@@ -10,7 +9,6 @@ function ProductPage({ cart, setCart }) {
   const [product, setProductData] = useState({});
 
   const [isLoading, setIsLoading] = useState();
-  // const [cart, setCart] = useState([]);
 
   const { id } = useParams();
   const {

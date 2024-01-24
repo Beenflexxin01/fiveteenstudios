@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NewArrivals from "../Features/Home/Arrivals/ArrivalProducts";
 import FilterOperation from "../Features/Products/OperationFilter";
 import OperationSort from "../Features/Products/OperationSort";
-function Products() {
+function Autumn() {
   const [arrivals, setArrivals] = useState([]);
 
   useEffect(function () {
@@ -50,4 +50,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Autumn;
