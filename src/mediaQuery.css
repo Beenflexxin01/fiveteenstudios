@@ -217,6 +217,10 @@
     border-bottom: none;
   }
 
+  .h1 {
+    font-size: 2rem;
+  }
+
   .burger-menu.open {
     transform: translate(0);
     opacity: 82%;

@@ -1,12 +1,12 @@
 const fs = require("fs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const Products = require("../models/ProductListModel");
-const Blog = require("../models/blogDesignModel");
-const Arrivals = require("../models/arrivalModel");
-const Features = require("../models/featureProductModel");
-const AllFeatures = require("../models/allFeatureModel");
-const SummerCollection = require("../models/summerCollectionModel");
+const Products = require("./models/ProductListModel");
+const Blog = require("./models/blogDesignModel");
+const Arrivals = require("./models/arrivalModel");
+const Features = require("./models/featureProductModel");
+const AllFeatures = require("./models/allFeatureModel");
+const SummerCollection = require("./models/summerCollectionModel");
 
 dotenv.config({ path: "./config.env" });
 

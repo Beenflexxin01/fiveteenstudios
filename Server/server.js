@@ -3,13 +3,12 @@ const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const Products = require("./models/ProductListModel");
-const Arrivals = require("./models/arrivalModel");
-const Blog = require("./models/blogDesignModel");
-const Features = require("./models/featureProductModel");
-const AllFeatures = require("./models/allFeatureModel");
-const SummerCollection = require("./models/summerCollectionModel");
-
+const Products = require("./Server/models/ProductListModel");
+const Arrivals = require("./Server/models/arrivalModel");
+const Blog = require("./Server/models/blogDesignModel");
+const Features = require("./Server/models/featureProductModel");
+const AllFeatures = require("./Server/models/allFeatureModel");
+const SummerCollection = require("./Server/models/summerCollectionModel");
 const app = express();
 
 app.use(express.json());
