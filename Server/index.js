@@ -9,6 +9,7 @@ const Blog = require("./models/blogDesignModel");
 const Features = require("./models/featureProductModel");
 const AllFeatures = require("./models/allFeatureModel");
 const SummerCollection = require("./models/summerCollectionModel");
+const compression = require("compression");
 const app = express();
 
 app.use(express.json());
@@ -176,6 +177,8 @@ app.get("/api/summer/:id", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
+app.use(compression());
 
 process.on("SIGTERM", function () {
   console.log("🤗 SIGTERM RECEIVED, Shutting down gracefully");
