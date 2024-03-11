@@ -10,6 +10,7 @@ const Features = require("./models/featureProductModel");
 const AllFeatures = require("./models/allFeatureModel");
 const SummerCollection = require("./models/summerCollectionModel");
 const compression = require("compression");
+const stripe = require("./Routes/stripe");
 const app = express();
 
 app.use(express.json());
@@ -20,11 +21,15 @@ app.use(
   })
 );
 
+// app.use("api/stripe", stripe);
+app.use("api/create-checkout-session", stripe);
+
 process.on("UncaughtException", (err) => {
   console.log(err.message);
   console.log("UNCAUGHT EXCEPTION... SHUTTING DOWN NOW......");
 });
 
+// dotenv.config({ path: "./config.env" });
 dotenv.config({ path: "./server/config.env" });
 
 const DB = process.env.DATABASE.replace(

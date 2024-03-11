@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ShoppingCart from "../Features/Cart/ShoppingCart";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { toast } from "react-toastify";
 
 function ShoppingNavFn({ cartCount, setCart, cart }) {
@@ -71,7 +71,7 @@ function ShoppingNavFn({ cartCount, setCart, cart }) {
       />
 
       <button onClick={() => setCartVisibility(true)} className="shop-btn">
-        <HiOutlineShoppingBag className="icons" />
+        <HiOutlineShoppingCart className="icons" />
         {cartLength > 0 && <span className="product-count">{cartLength}</span>}
       </button>
     </div>

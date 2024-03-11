@@ -1,6 +1,6 @@
 import { HiTrash, HiXMark } from "react-icons/hi2";
 import { Link, useNavigate } from "react-router-dom";
-
+import PayBtn from "../../UI/PayBtn";
 function ShoppingCart({
   visibility,
   cart,
@@ -9,7 +9,7 @@ function ShoppingCart({
   handleIncreament,
   handleDecreament,
 }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const totalQuantityInCart = cart.reduce(
     (total, item) => total + item.quantity,
@@ -94,11 +94,12 @@ function ShoppingCart({
                   Total Price: ${totalProductPrice}.00 USD
                 </div>
 
-                <button
+                {/* <button
                   className="btn checkout-btn"
                   onClick={() => navigate("/checkout")}>
                   Proceed to checkout
-                </button>
+                </button> */}
+                <PayBtn cart={cart} />
               </div>
             </>
           )}

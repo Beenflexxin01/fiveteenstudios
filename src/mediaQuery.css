@@ -93,10 +93,6 @@
 }
 
 @media (max-width: 65em) {
-  body {
-    background-color: rgb(215, 215, 226);
-  }
-
   .logo {
     margin-left: 40rem;
   }

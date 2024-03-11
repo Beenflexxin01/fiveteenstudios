@@ -14,7 +14,7 @@ import Login from "./Page/Login";
 import SignUp from "./Page/SignUp";
 import PasswordReset from "./Page/PasswordReset";
 import SummerDetails from "./Page/SummerDetails";
-import Checkout from "./Page/Checkout";
+// import Checkout from "./Page/Checkout";
 
 import Cart from "./Features/Cart/Cart";
 import Blogs from "./Features/Journals.jsx/Blogs";
@@ -27,6 +27,8 @@ import AllfeatureProductDetails from "./Features/Home/FeatureProducts/Allfeature
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import CheckOutSuccess from "./UI/CheckOutSuccess";
+// import ShoppingCart from "./Features/Cart/ShoppingCart";
 
 function App() {
   const [cart, setCart] = useState(
@@ -68,10 +70,11 @@ function App() {
             <Route path="products" element={<Products />} />
             <Route path="story" element={<Story />} />
             <Route path="login" element={<Login />} />
-            <Route path="checkout" element={<Checkout />} />
+            {/* <Route path="checkout-success" element={<CheckOutSuccess />} /> */}
             <Route path="AllFeatureProducts" element={<AllFeatureProducts />} />
             <Route path="account/register" element={<SignUp />} />
             <Route path="account/recover" element={<PasswordReset />} />
+            {/* <Route path="shopping-cart" element={<ShoppingCart />} /> */}
             <Route
               path="productPage/:id"
               element={

@@ -1084,38 +1084,20 @@ ion-icon {
 
 .Toastify__toast--warning {
   background: #ffe8bc !important;
-  background: #fdbf4b !important;
-  font-size: 1.2rem;
-  text-align: center;
-  position: relative;
+  background: #f82e27 !important;
+  font-size: 1.1rem;
+  color: #eee;
 }
 .Toastify__toast--error {
   background: #f0696c !important;
   background: #fca7a9 !important;
 }
 .Toastify__toast--success {
-  background: #58f860 !important;
-  font-size: 1.4rem;
-  border-radius: 4px;
-  z-index: 1;
-  position: relative;
-  text-align: center;
-}
-.toastBody {
-  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
-  color: #10171d;
-  font-size: 0.875rem !important;
-  font-size: 4rem;
-}
-.Toastify__progress-bar {
-  background: #333f48 !important;
-  background: #248609 !important;
+  background: #40ea8f !important;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
-.Toastify__toast-icon {
-  height: 2rem;
-  position: absolute;
-  bottom: 2rem;
-  color: green;
-  background: transparent !important;
+.Toastify__progress-bar {
+  background: #333f48 !important;
 }

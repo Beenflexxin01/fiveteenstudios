@@ -35,7 +35,6 @@ function CartFunction({ product, cart, setCart }) {
       ]);
       toast.success(`${product.title} added to the cart`);
     }
-    console.log(cart);
   };
 
   const handleIncreament = (productName) => {
