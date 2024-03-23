@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "commonjs",
   "main": "./src/App.jsx",
-  "proxy": "http://localhost:5173",
+  "proxy": "https://fiveteen-studios.onrender.com",
   "scripts": {
     "dev": "vite",
     "start": "nodemon ./server/index.js",
