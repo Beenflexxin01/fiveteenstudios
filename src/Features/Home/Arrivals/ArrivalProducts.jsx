@@ -15,7 +15,7 @@ function NewArrivals({ arrivalData }) {
           </div>
           <div className="text-align">
             <p className="text-description">{title}</p>
-            <p className="text-description">{price}</p>
+            <p className="text-description">${price}.00</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 function FeatureProductsData({ features }) {
+  
   const navigate = useNavigate();
   return (
     <>
