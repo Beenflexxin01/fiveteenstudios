@@ -16,7 +16,7 @@ function FeatureProductsData({ features }) {
             <p className="text-description">
               <strong>{features.title}</strong>
             </p>
-            <p className="text-description">{features.price}</p>
+            <p className="text-description">${features.price}.00</p>
             <img src={features.imageCover} alt="" />
           </div>
         </div>

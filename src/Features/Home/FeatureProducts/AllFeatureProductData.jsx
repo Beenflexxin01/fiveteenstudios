@@ -15,7 +15,7 @@ function AllFeatureProductData({ allfeatures }) {
             <p className="text-description">
               <strong>{allfeatures.title}</strong>
             </p>
-            <p className="text-description">{allfeatures.price}</p>
+            <p className="text-description">${allfeatures.price}.00</p>
           </div>
         </div>
       </div>

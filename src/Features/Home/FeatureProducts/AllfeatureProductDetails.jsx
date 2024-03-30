@@ -80,7 +80,7 @@ function AllfeatureProductDetails({ cart, setCart }) {
               <div className="price-group">
               <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
-                  <s>{oldPrice}</s>
+                  <s>${oldPrice}.00</s>
                 </p>
                 <p className="text-descriptions">{soldOut}</p>
                 <p className="text-descriptions sale">{sale}</p>
