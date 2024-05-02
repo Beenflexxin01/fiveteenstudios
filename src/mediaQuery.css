@@ -1,7 +1,12 @@
 @media (max-width: 84rem) {
-  /* body {
-    background-color: red;
-  } */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    margin: auto;
+    padding: auto;
+  }
 
   .logo {
     margin-left: 10rem;
@@ -199,9 +204,9 @@
     top: 8rem;
     left: 0;
     width: 45%;
-    height: 100vh;
+    height: 50vh;
     align-items: start;
-    transition: all 0.6s linear;
+    transition: all 0.3s linear;
     transform: translate(-100%);
     opacity: 0;
     padding: 5rem 1.5rem;
@@ -214,8 +219,7 @@
     transform: scaleY(1.13);
     gap: 3rem;
     margin: 0;
-    z-index: -1; */ 
-
+    z-index: -1; */
 
   .active {
     border-bottom: none;
@@ -234,7 +238,7 @@
     font-size: 1.8rem;
     color: #eee;
     opacity: 95%;
-    padding: 4rem;
+    /* padding: 4rem; */
   }
 }
 
@@ -265,11 +269,6 @@
 
   .grid-2_cols {
     margin: 1rem 0;
-  }
-
-  .container {
-    margin: 0;
-    padding: 0;
   }
 
   .grid-img {
@@ -312,10 +311,6 @@
     overflow-x: hidden;
   } */
 
-  html {
-    overflow-x: hidden;
-  }
-
   .logo {
     margin-left: 8rem;
   }
@@ -330,6 +325,7 @@
 
   .grid-image {
     height: 40vh;
+    width: 70%;
   }
 
   .btn-view {
@@ -407,10 +403,6 @@
 
   .grid-2-cols {
     margin: 5rem 0;
-  }
-
-  .grid-image {
-    margin: 2rem;
   }
 
   .romans {
