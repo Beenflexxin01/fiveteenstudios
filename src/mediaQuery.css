@@ -209,6 +209,14 @@
     gap: 3rem;
   }
 
+  /* on: absolute;
+    right: 0;
+    transform: scaleY(1.13);
+    gap: 3rem;
+    margin: 0;
+    z-index: -1; */ 
+
+
   .active {
     border-bottom: none;
   }

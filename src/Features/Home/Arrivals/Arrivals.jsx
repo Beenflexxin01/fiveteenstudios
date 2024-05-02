@@ -39,7 +39,12 @@ function Arrivals() {
             })}
         </div>
         <div className="video">
-          <ReactPlayer ref={playerRef} url={VIDEO_PATH} controls={true} />
+          <ReactPlayer
+            ref={playerRef}
+            url={VIDEO_PATH}
+            controls={true}
+            width={"100%"}
+          />
         </div>
       </div>
     </>
