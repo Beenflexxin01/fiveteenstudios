@@ -59,6 +59,7 @@ li {
   background-color: #000;
   padding: 1rem;
   position: sticky;
+  /* width: 99%; */
   top: 0;
   z-index: 1;
 }

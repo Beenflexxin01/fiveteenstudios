@@ -47,7 +47,7 @@ function Footer() {
         <hr className="hr" />
 
         <div className="footer-nav footer-image">
-          <ul className="footer-nav-ul">
+          <ul className="footer-nav-ul fot-img">
             <li className="">
               <img src={amex} alt="" className="footer-img" />
             </li>
@@ -69,7 +69,7 @@ function Footer() {
           </ul>
         </div>
         <div className="footer-nav">
-          <ul className="footer-nav-ul">
+          <ul className="footer-nav-ul fot">
             <li className="footer-nav-li">
               <span className="nav-link">&copy; 2023, </span>
               <NavLink to="https://fiveteenstudios.com" className="nav-link">
