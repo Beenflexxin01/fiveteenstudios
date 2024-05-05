@@ -14,13 +14,13 @@ const stripe = require("./Routes/stripe");
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    credentials: true,
-    // origin: "http://localhost:5173",
-    origin: "https://fiveteen-studios.onrender.com",
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: "http://localhost:5174",
+//     // origin: "https://fiveteen-studios.onrender.com",
+//   })
+// );
 
 // app.use("api/stripe", stripe);
 app.use("api/create-checkout-session", stripe);
@@ -30,8 +30,8 @@ process.on("UncaughtException", (err) => {
   console.log("UNCAUGHT EXCEPTION... SHUTTING DOWN NOW......");
 });
 
-dotenv.config({ path: "./config.env" });
-// dotenv.config({ path: "./server/config.env" });
+// dotenv.config({ path: "./config.env" });
+dotenv.config({ path: "./server/config.env" });
 
 const DB = process.env.DATABASE.replace(
   "<password>",
