@@ -2,7 +2,8 @@ import ReactPlayer from "react-player";
 
 import { useEffect, useRef, useState } from "react";
 import NewArrivals from "./ArrivalProducts";
-import BackendLink from "../../utils/BackendLink";
+import BackendLink from "../../../utils/BackendLink";
+
 
 const VIDEO_PATH = "https://www.youtube.com/watch?v=o-Mgx_XLqYM&themeRefresh=1";
 

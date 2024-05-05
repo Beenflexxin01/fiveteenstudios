@@ -10,7 +10,7 @@ function Products({ addProductToCart, products }) {
   useEffect(function () {
     async function getProductList() {
       try {
-        const res = await fetch(`$${BackendLink}/api/products`);
+        const res = await fetch(`${BackendLink}/api/products`);
         if (!res.ok)
           throw new Error(
             "Something went wrong while loading the products from the database."

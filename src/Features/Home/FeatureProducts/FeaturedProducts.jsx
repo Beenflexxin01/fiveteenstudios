@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import FeatureProductsData from "./FeatureProductsData";
 import { useNavigate } from "react-router-dom";
-import BackendLink from "../../utils/BackendLink";
+import BackendLink from "../../../utils/BackendLink";
 
 function Products() {
   const [featureProducts, setFeatureProducts] = useState([]);

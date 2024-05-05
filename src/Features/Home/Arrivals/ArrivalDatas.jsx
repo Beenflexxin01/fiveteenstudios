@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/ProductCollections";
-import BackendLink from "../../utils/BackendLink";
+import BackendLink from "../../../utils/BackendLink";
 
 import CartFunction from "../../../UI/CartFunction";
 function ArrivalDatas({ cart, setCart }) {

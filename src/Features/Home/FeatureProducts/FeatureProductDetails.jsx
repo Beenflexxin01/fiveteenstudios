@@ -4,7 +4,7 @@ import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
-import BackendLink from "../../utils/BackendLink";
+import BackendLink from "../../../utils/BackendLink";
 
 function FeatureProductDetails({ cart, setCart }) {
   const [product, setProductData] = useState({});

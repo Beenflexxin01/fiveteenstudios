@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
-import BackendLink from "../../utils/BackendLink";
+import BackendLink from "../../../utils/BackendLink";
 
 import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
