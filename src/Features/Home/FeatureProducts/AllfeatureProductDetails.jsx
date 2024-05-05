@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
+import BackendLink from "../../utils/BackendLink";
 
 import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
@@ -33,7 +34,7 @@ function AllfeatureProductDetails({ cart, setCart }) {
       async function getFeatureProductDetails() {
         try {
           const res = await fetch(
-            `http://localhost:5000/api/allfeatures/${id}`
+            `${BackendLink}/api/allfeatures/${id}`
           );
           if (!res.ok)
             throw new Error(

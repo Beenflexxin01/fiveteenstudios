@@ -3,9 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/ProductCollections";
+import BackendLink from "../../utils/BackendLink";
 
 import CartFunction from "../../../UI/CartFunction";
-function ArrivalDatas({cart, setCart}) {
+function ArrivalDatas({ cart, setCart }) {
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
@@ -30,7 +31,7 @@ function ArrivalDatas({cart, setCart}) {
     function () {
       async function getArrivalDetails() {
         try {
-          const res = await fetch(`http://localhost:5000/api/arrivals/${id}`);
+          const res = await fetch(`${BackendLink}/api/arrivals/${id}`);
           if (!res.ok)
             throw new Error(
               "Something went wrong while loading the blogs from the database."
@@ -71,7 +72,7 @@ function ArrivalDatas({cart, setCart}) {
               <h2 className="secondary-header">{title}</h2>
               <p className="text-description">{description}</p>
               <div className="price-group">
-              <p className="text-description">${price}.00 USD</p>
+                <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
                   <s>{oldPrice}</s>
                 </p>
@@ -95,8 +96,8 @@ function ArrivalDatas({cart, setCart}) {
 
               <p className="text-descriptions">{quantity}</p>
               {/* <Button /> */}
-          
-                <CartFunction product={product} cart={cart} setCart={setCart} />
+
+              <CartFunction product={product} cart={cart} setCart={setCart} />
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}

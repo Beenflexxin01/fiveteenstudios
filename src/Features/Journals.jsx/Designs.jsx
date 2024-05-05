@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import BlogData from "./BlogData";
+import BackendLink from "../../utils/BackendLink";
 
 function Designs() {
   const [blogs, setBlogs] = useState([]);
@@ -7,7 +8,7 @@ function Designs() {
   useEffect(function () {
     async function getProductData() {
       try {
-        const res = await fetch("http://localhost:5000/api/blogs");
+        const res = await fetch(`${BackendLink}/api/blogs`);
         if (!res.ok)
           throw new Error(
             "Something went wrong while loading the blogs from the database."

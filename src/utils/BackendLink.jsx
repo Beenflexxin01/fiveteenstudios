@@ -1,3 +1,3 @@
-// const BackendLink = "http://localhost:8000";
-const BackendLink = "https://byfeyi-server.vercel.app";
+// const BackendLink = "http://localhost:5000";
+const BackendLink = "https://fivteen-api.vercel.app/api/blogs";
 export default BackendLink;

@@ -3,6 +3,7 @@ import AllFeatureProductData from "./AllFeatureProductData";
 import FilterOperation from "../../Products/OperationFilter";
 import OperationSort from "../../Products/OperationSort";
 import Footer from "../../../UI/Footer";
+import BackendLink from "../../utils/BackendLink";
 
 function AllFeatureProducts() {
   const [allFeatures, setAllFeatures] = useState([]);
@@ -10,7 +11,7 @@ function AllFeatureProducts() {
   useEffect(function () {
     async function getAllFeatures() {
       try {
-        const res = await fetch("http://localhost:5000/api/allfeatures");
+        const res = await fetch(`${BackendLink}/api/allfeatures`);
         if (!res.ok)
           throw new Error(
             "There was an issue while trying to display all features"
@@ -35,14 +36,14 @@ function AllFeatureProducts() {
       <div className="container">
         <h2 className="secondary-header ">FEATURED PRODUCTS</h2>
         <div className="filters">
-            <div className="filter">
-              <li className="filter-li">Filter:</li>
-              <FilterOperation />
-            </div>
-            <div className="sort">
-              <div className="filter-li">Sort By:</div>
-              <OperationSort />
-            </div>
+          <div className="filter">
+            <li className="filter-li">Filter:</li>
+            <FilterOperation />
+          </div>
+          <div className="sort">
+            <div className="filter-li">Sort By:</div>
+            <OperationSort />
+          </div>
         </div>
 
         <div className="grid-4">

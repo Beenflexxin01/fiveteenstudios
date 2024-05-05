@@ -4,7 +4,9 @@ import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/ProductCollections";
 import CartFunction from "../../../UI/CartFunction";
-function FeatureProductDetails({cart, setCart}) {
+import BackendLink from "../../utils/BackendLink";
+
+function FeatureProductDetails({ cart, setCart }) {
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
@@ -30,7 +32,7 @@ function FeatureProductDetails({cart, setCart}) {
     function () {
       async function getFeatureProductDetails() {
         try {
-          const res = await fetch(`http://localhost:5000/api/features/${id}`);
+          const res = await fetch(`${BackendLink}/api/features/${id}`);
           if (!res.ok)
             throw new Error(
               "Something went wrong while loading the blogs from the database."
@@ -62,15 +64,14 @@ function FeatureProductDetails({cart, setCart}) {
                 <img src={image} alt={title} className="product-image" />
               </div>
 
-              <div className="img-grid">
-              </div>
+              <div className="img-grid"></div>
             </div>
             <div className="grid-2-cols checkout-grid product-grid">
               <p className="text-descriptions">{defaultText}</p>
               <h2 className="secondary-header">{title}</h2>
               <p className="text-description">{description}</p>
               <div className="price-group">
-              <p className="text-description">${price}.00 USD</p>
+                <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
                   <s>${oldPrice}.00</s>
                 </p>
@@ -93,7 +94,7 @@ function FeatureProductDetails({cart, setCart}) {
               </div>
 
               <p className="text-descriptions">{quantity}</p>
-              <CartFunction product={product} cart={cart} setCart={setCart}/>
+              <CartFunction product={product} cart={cart} setCart={setCart} />
               <div className="payment-link">
                 <Link to="" className="text-descriptions nav-link">
                   {paymentOption}

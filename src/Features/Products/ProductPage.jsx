@@ -4,6 +4,7 @@ import Footer from "../../UI/Footer";
 import Loader from "../../UI/Loader";
 import OtherProducts from "../../UI/ProductCollections";
 import CartFunction from "../../UI/CartFunction";
+import BackendLink from "../../utils/BackendLink";
 
 function ProductPage({ cart, setCart }) {
   const [product, setProductData] = useState({});
@@ -31,7 +32,7 @@ function ProductPage({ cart, setCart }) {
     function () {
       async function getProductDetails() {
         try {
-          const res = await fetch(`http://localhost:5000/api/products/${id}`);
+          const res = await fetch(`${BackendLink}/api/products/${id}`);
           if (!res.ok)
             throw new Error(
               "Something went wrong while loading the blogs from the database."

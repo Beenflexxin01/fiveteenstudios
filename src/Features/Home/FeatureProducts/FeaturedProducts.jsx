@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FeatureProductsData from "./FeatureProductsData";
 import { useNavigate } from "react-router-dom";
+import BackendLink from "../../utils/BackendLink";
 
 function Products() {
   const [featureProducts, setFeatureProducts] = useState([]);
@@ -8,7 +9,7 @@ function Products() {
   useEffect(function () {
     async function getFeatureProducts() {
       try {
-        const res = await fetch("http://localhost:5000/api/features");
+        const res = await fetch(`${BackendLink}api/features`);
 
         if (!res.ok)
           throw new Error(

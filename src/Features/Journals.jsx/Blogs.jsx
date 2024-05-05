@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Loader from "../../UI/Loader";
-
+import BackendLink from "../../utils/BackendLink";
 import Footer from "../../UI/Footer";
 import OtherFeatureProducts from "../../UI/OtherFeatureProducts";
 function Blogs() {
@@ -54,7 +54,7 @@ function Blogs() {
       async function getBlogDetails() {
         try {
           setIsLoading(true);
-          const res = await fetch(`http://localhost:5000/api/blogs/${id}`);
+          const res = await fetch(`${BackendLink}/api/blogs/${id}`);
           if (!res.ok)
             throw new Error(
               "There is something wrong displaying the blog data"

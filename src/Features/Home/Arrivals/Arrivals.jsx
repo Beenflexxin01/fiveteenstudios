@@ -2,6 +2,8 @@ import ReactPlayer from "react-player";
 
 import { useEffect, useRef, useState } from "react";
 import NewArrivals from "./ArrivalProducts";
+import BackendLink from "../../utils/BackendLink";
+
 const VIDEO_PATH = "https://www.youtube.com/watch?v=o-Mgx_XLqYM&themeRefresh=1";
 
 function Arrivals() {
@@ -11,7 +13,7 @@ function Arrivals() {
   useEffect(function () {
     async function getArrivals() {
       try {
-        const res = await fetch(`http://localhost:5000/api/arrivals`);
+        const res = await fetch(`${BackendLink}/api/arrivals`);
         if (!res.ok)
           throw new Error("There is an error while loading the arrivals");
 
