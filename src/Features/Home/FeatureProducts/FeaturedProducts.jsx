@@ -9,7 +9,7 @@ function Products() {
   useEffect(function () {
     async function getFeatureProducts() {
       try {
-        const res = await fetch(`${BackendLink}api/features`);
+        const res = await fetch(`${BackendLink}/api/features`);
 
         if (!res.ok)
           throw new Error(
