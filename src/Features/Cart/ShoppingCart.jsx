@@ -1,5 +1,5 @@
 import { HiTrash, HiXMark } from "react-icons/hi2";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PayBtn from "../../UI/PayBtn";
 function ShoppingCart({
   visibility,

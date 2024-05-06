@@ -1,6 +1,7 @@
 @media (max-width: 84rem) {
   body {
     overflow-x: hidden;
+    background-color: grey;
   }
 
   .container {
@@ -64,12 +65,16 @@
 }
 
 @media (max-width: 75em) {
-  /* body {
+  body {
     background-color: green;
-  } */
+  }
 
   .logo {
     margin-left: 4rem;
+  }
+
+  .journals {
+    top: 50%;
   }
 
   .grid-img {
@@ -99,12 +104,12 @@
 
 @media (max-width: 67em) {
   .logo {
-    margin-left: 40rem;
+    margin-left: 35rem;
   }
 
-  /* body {
+  body {
     background-color: red;
-  } */
+  }
 
   .product-image {
     width: 100%;
@@ -261,16 +266,24 @@
 }
 
 @media (max-width: 48em) {
-  /* body {
+  body {
     background-color: yellow;
-  } */
+  }
+
+  .product-grid {
+    height: 50vh;
+  }
+
+  .blog {
+    margin: 1rem;
+  }
 
   .others {
     gap: 0;
   }
 
   .logo {
-    margin-left: 28rem;
+    margin-left: 24rem;
   }
 
   .blog-grid {
@@ -323,13 +336,26 @@
 }
 
 @media (max-width: 35rem) {
-  /* body {
+  body {
     background-color: rgb(250, 246, 246);
     overflow-x: hidden;
-  } */
+  }
+
+  .journals {
+    top: 40%;
+
+    left: 18%;
+    width: 55%;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .journal-img {
+    height: 55vh;
+  }
 
   .logo {
-    margin-left: 8rem;
+    margin-left: 13rem;
   }
 
   .strong-text {

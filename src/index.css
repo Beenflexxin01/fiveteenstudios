@@ -13,7 +13,6 @@ html {
 
 body {
   color: #555;
-  /* font-family: "Oswald", sans-serif; */
   font-weight: 400;
   height: 100%;
 }
@@ -28,14 +27,8 @@ li {
 }
 
 .active {
-  /* background-color: red; */
   border-bottom: 3px solid #eee;
 }
-
-/* .active:hover,
-.active:active {
-  border-bottom: 1px solid #fff;
-} */
 
 .link:link,
 .link:visited {
@@ -59,13 +52,12 @@ li {
   background-color: #000;
   padding: 1rem;
   position: sticky;
-  /* width: 99%; */
   top: 0;
   z-index: 1;
 }
 
 .logo {
-  margin-left: 21rem;
+  margin-left: 26rem;
   height: 4rem;
   width: 5rem;
   cursor: pointer;

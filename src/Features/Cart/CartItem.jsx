@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 // import { toast } from "react-toastify";
 import MainNav from '../../UI/MainNav'
 
 function CartItem() {
-  const [productData, setProductData] = useState([]);
-  const [count, setCoun] = useState(1);
+  const [productData] = useState([]);
+  const [count] = useState(1);
 
-  const { productId } = useParams();
+  // const { productId } = useParams();
   const [reloadNavBar, setReloadNavBar] = useState(false);
   const addToCart = () => {
     let cart = JSON.parse(localStorage.getItem("shopping-cart")) || [];
