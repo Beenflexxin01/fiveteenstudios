@@ -14,7 +14,7 @@ function Romans() {
           or five more than ten; 15.
         </p>
       </div>
-      <div className="grid-2 collections">
+      <div className="grid-2 collections roman-grid">
         <div className="grid-2-cols">
           <img src={f22} alt="" className="grid-image" />
           <Link to="/collections/aw" className="link">

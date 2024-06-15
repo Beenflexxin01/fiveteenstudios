@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import OtherProducts from "../../../UI/ProductCollections";
@@ -10,7 +10,7 @@ function FeatureProductDetails({ cart, setCart }) {
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
-
+const navigate = useNavigate()
   const {
     title,
     default: defaultText,
@@ -58,8 +58,11 @@ function FeatureProductDetails({ cart, setCart }) {
         {isLoading ? (
           <Loader />
         ) : (
-          <>
+            <>
             <div className="grid-2-cols checkout-grid product-grid">
+                <button className="btn-arr" onClick={() => navigate("/home")}>
+                &larr; Back
+              </button>
               <div className="product-img">
                 <img src={image} alt={title} className="product-image" />
               </div>

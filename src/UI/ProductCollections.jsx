@@ -26,7 +26,7 @@ function OtherProducts() {
       <div className="container">
         <h2 className="secondary-header">You may also like</h2>
 
-        <div className="grid-4">
+        <div className="grid-4 arrival-grid">
           {arrivals &&
             arrivals.map((arrivalData) => {
               return (

@@ -33,7 +33,7 @@ function Arrivals() {
       <div className="container">
         <h2 className="secondary-header">NEW ARRIVALS</h2>
 
-        <div className="grid-4">
+        <div className="grid-4 arrival-grid">
           {arrivals &&
             arrivals.map((arrivalData) => {
               return (

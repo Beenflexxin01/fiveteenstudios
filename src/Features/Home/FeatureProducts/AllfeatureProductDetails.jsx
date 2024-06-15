@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "../../../UI/Footer";
 import Loader from "../../../UI/Loader";
 import BackendLink from "../../../utils/BackendLink";
@@ -11,7 +11,7 @@ function AllfeatureProductDetails({ cart, setCart }) {
   const [product, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState();
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const {
     title,
     default: defaultText,
@@ -33,9 +33,7 @@ function AllfeatureProductDetails({ cart, setCart }) {
     function () {
       async function getFeatureProductDetails() {
         try {
-          const res = await fetch(
-            `${BackendLink}/api/allfeatures/${id}`
-          );
+          const res = await fetch(`${BackendLink}/api/allfeatures/${id}`);
           if (!res.ok)
             throw new Error(
               "Something went wrong while loading the blogs from the database."
@@ -63,6 +61,9 @@ function AllfeatureProductDetails({ cart, setCart }) {
         ) : (
           <>
             <div className="grid-2-cols checkout-grid product-grid">
+              <button className="btn-arr" onClick={() => navigate("/home")}>
+                &larr; Back
+              </button>
               <div className="product-img">
                 <img src={image} alt={title} className="product-image" />
               </div>
@@ -79,7 +80,7 @@ function AllfeatureProductDetails({ cart, setCart }) {
               <h2 className="secondary-header">{title}</h2>
               <p className="text-description">{description}</p>
               <div className="price-group">
-              <p className="text-description">${price}.00 USD</p>
+                <p className="text-description">${price}.00 USD</p>
                 <p className="text-description strike">
                   <s>${oldPrice}.00</s>
                 </p>

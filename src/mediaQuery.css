@@ -72,9 +72,9 @@
     height: 45vh;
   }
 
-  .grid-4-image {
+  /* .grid-4-image {
     height: 30vh;
-  }
+  } */
 
   .product--grid {
     grid-template-columns: repeat(2, 1fr);
@@ -95,14 +95,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .arrival-grid {
+    display: grid;
+    grid-template-columns: 60% 60% 60% 60%;
+    overflow-x: scroll;
+  }
+
   .collections {
-    display: block;
     padding-top: 3rem;
-    margin-top: 9rem;
+    margin-top: 5rem;
+    margin: 5rem 0;
   }
 
   .grid-image {
     height: 60vh;
+    margin: 0 2rem;
   }
 
   .blog {
@@ -235,11 +242,6 @@
     height: 50vh;
   }
 
-  .grid-4 {
-
-    display: block;
-  }
-
   .blog {
     margin: 1rem;
   }
@@ -311,17 +313,18 @@
     left: 45%;
   }
 
-  .strong-text {
-    font-size: 2rem;
+  .strong-text,
+  .secondary-header {
+    font-size: 1.7rem;
   }
 
   .text-description {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .grid-image {
     height: 40vh;
-    width: 70%;
+    /* width: 70%; */
   }
 
   .btn-view {
@@ -377,6 +380,7 @@
 
   .btn {
     padding: 1rem;
+    font-size: 1.4rem;
   }
 
   .login {

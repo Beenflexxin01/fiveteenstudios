@@ -32,7 +32,7 @@ function Products() {
     <>
       <div className="container">
         <h2 className="secondary-header">FEATURED PRODUCTS</h2>
-        <div className="grid-4">
+        <div className="grid-4 arrival-grid">
           {featureProducts &&
             featureProducts.map((features) => {
               return (
