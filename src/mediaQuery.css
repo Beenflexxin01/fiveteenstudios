@@ -235,6 +235,11 @@
     height: 50vh;
   }
 
+  .grid-4 {
+
+    display: block;
+  }
+
   .blog {
     margin: 1rem;
   }
