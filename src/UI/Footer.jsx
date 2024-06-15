@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import discover from "../Images/discover.jfif";
 import apple from "../Images/applepay.png";
 import amex from "../Images/amex.png";
@@ -93,11 +93,13 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="footer-nav">
+        <div className="footer-nav footer--nav">
           <ul className="footer-nav-ul fot">
             <li className="footer-nav-li">
-              <span className="nav-link">&copy; 2023, </span>
-              <NavLink to="https://fiveteenstudios.com" className="nav-link">
+              <span className="nav-link footer-link">&copy; 2023, </span>
+              <NavLink
+                to="https://fiveteenstudios.com"
+                className="nav-link footer-link">
                 <span>Fivteen Studios</span>
               </NavLink>
             </li>
@@ -105,7 +107,7 @@ function Footer() {
             <li className="footer-nav-li">
               <NavLink
                 to="https://fiveteenstudios.com/policies/refund-policy"
-                className="nav-link">
+                className="nav-link footer-link">
                 <span>Refund Policy</span>
               </NavLink>
             </li>
@@ -113,7 +115,7 @@ function Footer() {
             <li className="footer-nav-li">
               <NavLink
                 to="https://fiveteenstudios.com/policies/privacy-policy"
-                className="nav-link">
+                className="nav-link footer-link">
                 <span>Privacy Policy</span>
               </NavLink>
             </li>
@@ -121,7 +123,7 @@ function Footer() {
             <li className="footer-nav-li">
               <NavLink
                 to="https://fiveteenstudios.com/policies/terms-of-service"
-                className="nav-link">
+                className="nav-link footer-link">
                 <span>Terms of Service</span>
               </NavLink>
             </li>
@@ -129,7 +131,7 @@ function Footer() {
             <li className="footer-nav-li">
               <NavLink
                 to="https://fiveteenstudios.com/policies/shipping-policy"
-                className="nav-link">
+                className="nav-link footer-link">
                 <span>Shipping Policy</span>
               </NavLink>
             </li>
@@ -137,11 +139,20 @@ function Footer() {
             <li className="footer-nav-li">
               <NavLink
                 to="https://fiveteenstudios.com/policies/contatc-information"
-                className="nav-link">
+                className="nav-link footer-link">
                 <span>Contact Information</span>
               </NavLink>
             </li>
           </ul>
+        </div>
+
+        <div className="dev">
+          <p className="text-description">
+            Created with love by {""}
+            <Link to="https://nola-portfolio.netlify.app/" target="_blank">
+              Omotayo💚💙
+            </Link>
+          </p>
         </div>
       </div>
     </>

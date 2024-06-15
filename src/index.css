@@ -366,6 +366,11 @@ textarea {
   width: 40%;
 }
 
+.dev {
+  margin: 4rem auto;
+  text-align: center;
+}
+
 .nav-link {
   text-decoration: none;
   color: #555;
