@@ -243,7 +243,8 @@
     height: 50vh;
   }
 
-  .grid-4-image {
+  .grid-4-image,
+  .grid-image {
     height: 25vh;
   }
 
