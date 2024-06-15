@@ -17,11 +17,9 @@ function Footer() {
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_SUB_EMAIL,
         form.current,
-        // import.meta.env.VITE_SUB_EMAIL
         import.meta.env.VITE_EMAILJS_PUBLIC
-
       );
       toast.success(
         "Welcome to the family! You have successfully subscribed to our newsletter!"

@@ -66,10 +66,12 @@ li {
 }
 
 .shop-btn {
-  background-color: #eeeeee;
   border: none;
   outline: none;
   cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  opacity: 85%;
 }
 
 .main-nav-ul,

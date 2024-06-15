@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import logo from "/logo.avif";
+// import logo from "./Images/logo.avif";
+import logo from "../../public/Images/logo.avif";
 import { HiMagnifyingGlass, HiOutlineLockOpen } from "react-icons/hi2";
 import ShoppingNavFn from "./ShoppingNavFn";
 function OtherNavs({ cartCount, cart, setCart }) {
