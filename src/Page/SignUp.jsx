@@ -14,8 +14,8 @@ function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${BackendLink}/api/register`, { name, email, password })
-      // .post(`http://localhost:5000/api/register/`, { name, email, password })
+      // .post(`${BackendLink}/api/register`, { name, email, password })
+      .post(`http://localhost:5000/api/register/`, { name, email, password })
       .then((result) => {
         navigate("/login");
         console.log(result);
