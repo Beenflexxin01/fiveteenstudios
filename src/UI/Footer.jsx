@@ -5,7 +5,34 @@ import amex from "../Images/amex.png";
 import master from "../Images/master.png";
 import paypal from "../Images/paypal.png";
 import visa from "../Images/visa.jfif";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 function Footer() {
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        // import.meta.env.VITE_SUB_EMAIL
+        import.meta.env.VITE_EMAILJS_PUBLIC
+
+      );
+      toast.success(
+        "Welcome to the family! You have successfully subscribed to our newsletter!"
+      );
+    } catch (err) {
+      toast.error(`${err}`);
+      console.log(err.message);
+    }
+
+    e.target.reset();
+  };
   return (
     <>
       <div className="collections  footer-section">
@@ -33,7 +60,7 @@ function Footer() {
             <strong>Join The Family</strong>
           </h2>
           <div className="input">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <input
                 type="email"
                 placeholder="Email"

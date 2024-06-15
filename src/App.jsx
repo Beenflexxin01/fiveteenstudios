@@ -4,10 +4,8 @@ import AppLayout from "./UI/AppLayout";
 
 import Home from "./Page/Home";
 import Products from "./Page/Products";
-import Journals from "./Page/Journals";
 import Summer from "./Page/Summer";
 import Autumn from "./Page/Autumn";
-import Story from "./Page/Story";
 import Contact from "./Page/Contact";
 import PageNotFound from "./Page/PageNotFound";
 import Login from "./Page/Login";
@@ -17,7 +15,6 @@ import SummerDetails from "./Page/SummerDetails";
 // import Checkout from "./Page/Checkout";
 
 import Cart from "./Features/Cart/Cart";
-import Blogs from "./Features/Journals.jsx/Blogs";
 import ProductPage from "./Features/Products/ProductPage";
 import AllFeatureProducts from "./Features/Home/FeatureProducts/AllFeatureProducts";
 
@@ -27,7 +24,6 @@ import AllfeatureProductDetails from "./Features/Home/FeatureProducts/Allfeature
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 // import CheckOutSuccess from "./UI/CheckOutSuccess";
 // import ShoppingCart from "./Features/Cart/ShoppingCart";
@@ -68,9 +64,7 @@ function App() {
             />
             <Route path="contact" element={<Contact />} />
             <Route path="home" element={<Home />} />
-            <Route path="blog" element={<Journals />} />
             <Route path="products" element={<Products />} />
-            <Route path="story" element={<Story />} />
             <Route path="login" element={<Login />} />
             {/* <Route path="checkout-success" element={<CheckOutSuccess />} /> */}
             <Route path="AllFeatureProducts" element={<AllFeatureProducts />} />
@@ -132,7 +126,6 @@ function App() {
                 />
               }
             />
-            <Route path="blogs/designs/:id" element={<Blogs />} />
             <Route path="collections/ss" element={<Summer />} />
             <Route path="collections/aw" element={<Autumn />} />
             <Route path="*" element={<PageNotFound />} />

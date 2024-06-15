@@ -5,22 +5,23 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const Products = require("./models/ProductListModel");
 const Arrivals = require("./models/arrivalModel");
-const Blog = require("./models/blogDesignModel");
 const Features = require("./models/featureProductModel");
 const AllFeatures = require("./models/allFeatureModel");
 const SummerCollection = require("./models/summerCollectionModel");
+const Clients = require("./models/clientModel");
 const compression = require("compression");
 const stripe = require("./Routes/stripe");
 const app = express();
 
 app.use(express.json());
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: "http://localhost:5174",
-//     // origin: "https://fiveteen-studios.onrender.com",
-//   })
-// );
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    // origin: "https://fiveteen-studios.onrender.com",
+  })
+);
 
 // app.use("api/stripe", stripe);
 app.use("api/create-checkout-session", stripe);
@@ -121,27 +122,6 @@ app.get("/api/features/:id", async (req, res) => {
   }
 });
 
-app.get("/api/blogs", async (req, res) => {
-  try {
-    const blogs = await Blog.find();
-    res.json(blogs);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-});
-
-app.get("/api/blogs/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const blogs = await Blog.findById(id);
-    res.json(blogs);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-});
-
 app.get("/api/allfeatures", async (req, res) => {
   try {
     const allFeature = await AllFeatures.find();
@@ -182,6 +162,20 @@ app.get("/api/summer/:id", async (req, res) => {
     console.error(error);
     res.status(500).send("Server Error");
   }
+});
+
+app.post("/api/register", async (req, res) => {
+  try {
+    const clients = Clients.create(req.body);
+
+    res.json(clients);
+  } catch (err) {
+    console.log(err.message);
+  }
+
+  // Clients.create(req.body)
+  //   .then((clients) => res.json(clients))
+  //   .catch((err) => console.log(err));
 });
 
 app.use(compression());

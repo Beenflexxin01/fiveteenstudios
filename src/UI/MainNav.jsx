@@ -37,25 +37,6 @@ function NavBar({ cartCount, cart, setCart }) {
                   <span>PRODUCTS</span>
                 </NavLink>
               </li>
-
-              <li className="burger_class">
-                <NavLink
-                  to="/story"
-                  className="main-nav-link main-nav--link"
-                  onClick={toggleOffMenuBar}>
-                  <span>STORY</span>
-                </NavLink>
-              </li>
-
-              <li className="burger_class">
-                <NavLink
-                  to="/blog"
-                  className="main-nav-link main-nav--link"
-                  onClick={toggleOffMenuBar}>
-                  <span>JOURNAL</span>
-                </NavLink>
-              </li>
-
               <li className="burger_class">
                 <NavLink
                   to="/contact"

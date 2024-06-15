@@ -1,16 +1,7 @@
 @media (max-width: 84rem) {
-  body {
-    overflow-x: hidden;
-    background-color: grey;
-  }
-
   .container {
     margin: auto;
     padding: auto;
-  }
-
-  .logo {
-    margin-left: 10rem;
   }
 
   .content-texts {
@@ -65,14 +56,6 @@
 }
 
 @media (max-width: 75em) {
-  body {
-    background-color: green;
-  }
-
-  .logo {
-    margin-left: 4rem;
-  }
-
   .journals {
     top: 50%;
   }
@@ -103,14 +86,6 @@
 }
 
 @media (max-width: 67em) {
-  .logo {
-    margin-left: 35rem;
-  }
-
-  body {
-    background-color: red;
-  }
-
   .product-image {
     width: 100%;
     height: 40rem;
@@ -210,25 +185,17 @@
     display: flex;
     background-color: #000000;
     position: absolute;
-    top: 8rem;
+    top: 7.8rem;
     left: 0;
-    width: 45%;
-    height: 50vh;
+    width: 40%;
     align-items: start;
     transition: all 0.3s linear;
-    transform: translate(-100%);
+    transform: translateY(100%) translate(-100%);
     opacity: 0;
     padding: 5rem 1.5rem;
     flex-direction: column;
     gap: 3rem;
   }
-
-  /* on: absolute;
-    right: 0;
-    transform: scaleY(1.13);
-    gap: 3rem;
-    margin: 0;
-    z-index: -1; */
 
   .active {
     border-bottom: none;
@@ -244,10 +211,8 @@
   }
 
   .main-nav--link {
-    font-size: 1.8rem;
     color: #eee;
     opacity: 95%;
-    /* padding: 4rem; */
   }
 
   .fot-img {
@@ -266,10 +231,6 @@
 }
 
 @media (max-width: 48em) {
-  body {
-    background-color: yellow;
-  }
-
   .product-grid {
     height: 50vh;
   }
@@ -282,20 +243,12 @@
     gap: 0;
   }
 
-  .logo {
-    margin-left: 24rem;
-  }
-
   .blog-grid {
     display: block;
   }
 
   .grid-2-image {
     width: 100%;
-  }
-
-  .nav-bar > .burger-menu {
-    width: 94%;
   }
 
   .grid-2_cols {
@@ -336,11 +289,6 @@
 }
 
 @media (max-width: 35rem) {
-  body {
-    background-color: rgb(250, 246, 246);
-    overflow-x: hidden;
-  }
-
   .journals {
     top: 40%;
 
@@ -355,7 +303,7 @@
   }
 
   .logo {
-    margin-left: 13rem;
+    left: 45%;
   }
 
   .strong-text {
@@ -363,7 +311,7 @@
   }
 
   .text-description {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .grid-image {

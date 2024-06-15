@@ -57,7 +57,9 @@ li {
 }
 
 .logo {
-  margin-left: 26rem;
+  position: absolute;
+  top: 20%;
+  left: 48%;
   height: 4rem;
   width: 5rem;
   cursor: pointer;
@@ -160,7 +162,7 @@ li {
 }
 
 .text-description {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .blog-descriptions {
@@ -1071,21 +1073,23 @@ ion-icon {
 }
 
 .Toastify__toast--warning {
-  background: #ffe8bc !important;
-  background: #f82e27 !important;
+  /* background: #ffe8bc !important;
+  background: #f82e27 !important; */
   font-size: 1.1rem;
-  color: #eee;
-}
-.Toastify__toast--error {
-  background: #f0696c !important;
-  background: #fca7a9 !important;
-}
-.Toastify__toast--success {
-  background: #40ea8f !important;
-  font-size: 1.3rem;
-  color: #fff;
+  font-weight: bold;
 }
 
-.Toastify__progress-bar {
-  background: #333f48 !important;
+/* .Toastify__toast--error {
+  background: #f0696c !important;
+  background: #fca7a9 !important;
+} */
+
+.Toastify__toast--success {
+  /* background: #40ea8f !important; */
+  font-size: 1.3rem;
+  font-weight: bold;
 }
+
+/* .Toastify__progress-bar {
+  background: #333f48 !important;
+} */

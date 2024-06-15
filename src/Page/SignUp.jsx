@@ -1,10 +1,34 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+import BackendLink from "../utils/BackendLink";
+
 function SignUp() {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${BackendLink}/api/register`, { name, email, password })
+      // .post(`http://localhost:5000/api/register/`, { name, email, password })
+      .then((result) => {
+        navigate("/login");
+        console.log(result);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <div className="login">
         <h2 className="secondary-header h1">Create Account</h2>
         <div className="form">
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <ul className="form-ul">
               <li className="form-li">
                 <input
@@ -12,6 +36,7 @@ function SignUp() {
                   placeholder="First Name"
                   required
                   className="input-contact-2"
+                  onChange={(e) => setName(e.target.value)}
                 />
               </li>
               <li className="form-li">
@@ -20,6 +45,7 @@ function SignUp() {
                   placeholder="Last Name"
                   required
                   className="input-contact-2"
+                  onChange={(e) => setName(e.target.value)}
                 />
               </li>
               <li className="form-li">
@@ -28,6 +54,7 @@ function SignUp() {
                   placeholder="Email"
                   required
                   className="input-contact-2"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </li>
               <li className="form-li">
@@ -37,6 +64,7 @@ function SignUp() {
                   required
                   className="input-contact-2"
                   minLength={8}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </li>
             </ul>

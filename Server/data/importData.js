@@ -7,7 +7,6 @@ const Arrivals = require("../models/arrivalModel");
 const Features = require("../models/featureProductModel");
 const AllFeatures = require("../models/allFeatureModel");
 const SummerCollection = require("../models/summerCollectionModel");
-
 dotenv.config({ path: "./server/config.env" });
 const DB = process.env.DATABASE.replace(
   "<password>",
