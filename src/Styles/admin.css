@@ -1,0 +1,157 @@
+.sidebar {
+  max-width: 20%;
+  position: absolute;
+  top: 8.4rem;
+  left: 0;
+  right: 0;
+  padding: 5rem 0.7rem;
+}
+
+.dd {
+  font-size: 4rem;
+}
+
+.sidebar-nav {
+  background-color: #000;
+  height: 168vh;
+  opacity: 60%;
+}
+
+.sidebar-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem 3rem;
+  margin-top: 0.38px;
+}
+
+.sidebar-link {
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+  /* border-bottom: none; */
+}
+
+.containr {
+  margin: 4rem 4rem 4rem 33rem;
+}
+
+.dashboard-amount {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.dashboard-description {
+  font-size: 1.7rem;
+  color: #fff;
+  text-align: center;
+}
+
+.dashboard-grid-4-cols {
+  background-color: #000;
+  border-radius: 19px;
+  padding: 1rem;
+  /* margin: 2rem 4rem; */
+  width: 40%;
+}
+
+.dashboard-analysis {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.product-li {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.product--li {
+  font-weight: 400;
+  line-height: 3;
+  font-size: 1.65rem;
+}
+
+.product-ul {
+  display: grid;
+  grid-template-columns: 58% 30% 30% 30% 30% 30% 30%;
+}
+
+.product--nav {
+  overflow-x: scroll;
+}
+
+.product_nav {
+  overflow: scroll;
+  height: 40vh;
+}
+
+.product--nav::-webkit-scrollbar,
+.product_nav::-webkit-scrollbar {
+  height: 0;
+}
+
+.product-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-tertiary-header {
+  text-align: start;
+  font-size: 2rem;
+}
+
+.in-stock {
+  color: #ffffff;
+  background-color: #76f076;
+  padding: 0 1rem;
+  border-radius: 9px;
+}
+
+.out-of-stock {
+  color: #ffffff;
+  background-color: #fa9b9b;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  border-radius: 9px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product--img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9px;
+}
+
+.product-grid-2-cols {
+  margin: 2rem 1rem;
+  background-color: #0e020218;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.overview-li {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 3;
+}
+
+.overvview-nav {
+  background-color: #0e020218;
+  border-radius: 19px;
+}
+
+.status {
+  color: #ffffff;
+  background-color: #76f076;
+  padding: 0 1rem;
+  border-radius: 9px;
+  width: 30%;
+}

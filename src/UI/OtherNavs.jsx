@@ -14,7 +14,12 @@ function OtherNavs({ cartCount, cart, setCart }) {
 
       <div className="others">
         <li className="burger_class">
-          <NavLink to="/search" className="main-nav-link ">
+          <NavLink to="/admin" className="main-nav-link main-nav--link other-nav">
+            Admin
+          </NavLink>
+        </li>
+        <li className="burger_class">
+          <NavLink to="#" className="main-nav-link main-nav--link other-nav">
             <span>
               <HiMagnifyingGlass className="icons" />
             </span>
@@ -22,7 +27,7 @@ function OtherNavs({ cartCount, cart, setCart }) {
         </li>
 
         <li className="burger_class">
-          <NavLink to="/login" className="main-nav-link ">
+          <NavLink to="/login" className="main-nav-link main-nav--link other-nav ">
             <span>
               <HiOutlineLockOpen className="icons" />
             </span>

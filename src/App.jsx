@@ -12,7 +12,7 @@ import Login from "./Page/Login";
 import SignUp from "./Page/SignUp";
 import PasswordReset from "./Page/PasswordReset";
 import SummerDetails from "./Page/SummerDetails";
-// import Checkout from "./Page/Checkout";
+import AdminPanel from "./AdminPanel/AdminPanel";
 
 import Cart from "./Features/Cart/Cart";
 import ProductPage from "./Features/Products/ProductPage";
@@ -24,6 +24,10 @@ import AllfeatureProductDetails from "./Features/Home/FeatureProducts/Allfeature
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Dashboard from "./AdminPanel/Dashboard/Dashboard";
+import Posting from "./AdminPanel/Posting/Posting";
+import Settings from "./AdminPanel/Settings/Settings";
+import Orders from "./AdminPanel/Orders/Orders";
 
 // import CheckOutSuccess from "./UI/CheckOutSuccess";
 // import ShoppingCart from "./Features/Cart/ShoppingCart";
@@ -66,11 +70,9 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="products" element={<Products />} />
             <Route path="login" element={<Login />} />
-            {/* <Route path="checkout-success" element={<CheckOutSuccess />} /> */}
             <Route path="AllFeatureProducts" element={<AllFeatureProducts />} />
             <Route path="account/register" element={<SignUp />} />
             <Route path="account/recover" element={<PasswordReset />} />
-            {/* <Route path="shopping-cart" element={<ShoppingCart />} /> */}
             <Route
               path="productPage/:id"
               element={
@@ -128,6 +130,11 @@ function App() {
             />
             <Route path="collections/ss" element={<Summer />} />
             <Route path="collections/aw" element={<Autumn />} />
+            <Route path="admin" element={<AdminPanel />} />
+            <Route path="admin" element={<Dashboard />} />
+            <Route path="posting" element={<Posting />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="orders" element={<Orders />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>

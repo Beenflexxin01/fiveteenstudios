@@ -15,6 +15,7 @@ body {
   color: #555;
   font-weight: 400;
   height: 100%;
+  font-family: sans-serif;
 }
 
 li {
@@ -1100,3 +1101,28 @@ ion-icon {
 /* .Toastify__progress-bar {
   background: #333f48 !important;
 } */
+
+.pagination-ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem auto;
+}
+
+.pagination-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+.activePage {
+  background-color: #3ac1ff;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+}
+
+.other-nav {
+  border-bottom: none;
+}

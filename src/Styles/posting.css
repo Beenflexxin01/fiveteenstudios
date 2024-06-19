@@ -1,0 +1,33 @@
+.post-input {
+  /* width: 100%; */
+  border: 0.5px solid #e1e0e0;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+.post-form-li {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  cursor: pointer;
+  /* width: 80%; */
+  margin: 3.5%;
+  /* border: 0.5px solid #e1e0e0; */
+}
+
+.block {
+  display: flex;
+  gap: 3rem;
+}
+
+.post-input::placeholder {
+  opacity: 30%;
+}
+
+.order-ul {
+  grid-template-columns: 30% 30% 30% 30%;
+}

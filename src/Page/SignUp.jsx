@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { toast } from "react-toastify";
 
-import BackendLink from "../utils/BackendLink";
+// import BackendLink from "../utils/BackendLink";
 
 function SignUp() {
   const [name, setName] = useState();
@@ -11,16 +12,22 @@ function SignUp() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      // .post(`${BackendLink}/api/register`, { name, email, password })
-      .post(`http://localhost:5000/api/register/`, { name, email, password })
-      .then((result) => {
-        navigate("/login");
-        console.log(result);
-      })
-      .catch((err) => console.log(err));
+    try {
+      await axios
+        // .post(`${BackendLink}/api/register`, { name, email, password })
+        .post(`http://localhost:5000/api/register/`, { name, email, password })
+        .then((result) => {
+          navigate("/login");
+          console.log(result);
+        });
+      toast.success(
+        "User Account Successfully Created! You can now proceed to login"
+      );
+    } catch (err) {
+      toast.error(`${err}`);
+    }
   };
 
   return (

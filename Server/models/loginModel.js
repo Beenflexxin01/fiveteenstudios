@@ -1,12 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const bcrypt = require("bcryptjs");
-const clientSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, "A user must have a name"],
-    trim: true,
-  },
+const loginSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "A user must have an activ email address!"],
@@ -18,26 +12,15 @@ const clientSchema = new mongoose.Schema({
     ],
   },
 
-  photo: {
-    type: String,
-    default: "",
-  },
-
   password: {
     type: String,
     required: [true, "A user must have a unique password"],
     minlength: [8, "A password must not be less than 8 characters"],
     select: false,
   },
-
-  role: {
-    type: String,
-    enum: ["user", "guide", "lead-guide", "admin"],
-    default: "user",
-  },
 });
 
-clientSchema.pre("save", async (next) => {
+loginSchema.pre("save", async (next) => {
   if (!this.isModified("password")) return next();
 
   this.password = await bcrypt.hash(this.password, 12);
@@ -45,7 +28,7 @@ clientSchema.pre("save", async (next) => {
   next();
 });
 
-clientSchema.pre("save", (next) => {
+loginSchema.pre("save", (next) => {
   if (!this.isModified("password" || this.isNew)) return next();
 
   this.passwordChangedAt = Date.now() - 1000;
@@ -53,14 +36,14 @@ clientSchema.pre("save", (next) => {
   next();
 });
 
-clientSchema.methods.correctPassword = async (
+loginSchema.methods.correctPassword = async (
   candidatePassword,
   userPassword
 ) => {
   return await bcrypt.compare(candidatePassword, userPassword);
 };
 
-clientSchema.methods.changePasswordAfter = (JWTTimeStamp) => {
+loginSchema.methods.changePasswordAfter = (JWTTimeStamp) => {
   if (this.passwordChangedAt) {
     const changeTimeStamp = parseInt(
       this.passwordChangedAt.getTime() / 1000,
@@ -71,7 +54,7 @@ clientSchema.methods.changePasswordAfter = (JWTTimeStamp) => {
   return false;
 };
 
-clientSchema.createPasswordResetToken = () => {
+loginSchema.createPasswordResetToken = () => {
   const resetToken = crypto.randomBytes(32).toString("hex");
 
   this.passwordResetToken = crypto
@@ -82,6 +65,6 @@ clientSchema.createPasswordResetToken = () => {
   this.passwordResetExpired = Date.now() * 10 * 10 * 1000;
 };
 
-const Clients = mongoose.model("clients", clientSchema);
+const Login = mongoose.model("logins", loginSchema);
 
-module.exports = Clients;
+module.exports = Login;
